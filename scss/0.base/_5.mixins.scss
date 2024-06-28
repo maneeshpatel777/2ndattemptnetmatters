@@ -1,0 +1,132 @@
+// ==========================================================================
+// Mixins
+// ==========================================================================
+
+// BEM selectors
+
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+// Generate modifier color classes
+
+@mixin bg-colors($map) {
+  @each $theme, $color in $map {
+    &--#{$theme} {
+      background-color: $color;
+    }
+  }
+}
+
+// Generating :before or :after pseudo-element shapes
+
+@mixin p-el($el, $el-w: null, $el-h: null) {
+  @if $el == "before" or $el == "after" {
+    &:#{$el} {
+      @extend %pseudos;
+      width: $el-w;
+      height: $el-h;
+      @content;
+    }
+  } @else {
+    @error "`#{$el}` is not a valid pseudo-element.";
+  }
+}
+
+// Image replacement
+
+@mixin img-replace($img, $w, $h, $disp: block) {
+  background-image: url("#{$path--rel}/#{$img}");
+  background-repeat: no-repeat;
+  width: $w;
+  height: $h;
+  display: $disp;
+}
+
+// Media Queries
+
+@mixin mq($break) {
+  @if $break == "small" {
+    @media (min-width: $brkpoint-sm) and (max-width: $brkpoint-md) {
+      @content;
+    }
+  } @else if $break == "medium" {
+    @media (min-width: $brkpoint-md + 1) {
+      @content;
+    }
+  } @else if $break == "large" {
+    @media (min-width: $brkpoint-large) {
+      @content;
+    }
+  } @else if $break == "xlarge" {
+    @media (min-width: $brkpoint-xlarge) {
+      @content;
+    }
+  } @else {
+    @error "Whoops! No value could be retrieved for #{$break}";
+  }
+}
+
+// hover over nav item
+
+@mixin nav-item-hover($nav-element, $bg-color) {
+  &--#{$nav-element} {
+    &:hover {
+      background-color: $bg-color;
+
+      &::after {
+        @extend %nav-item-triangle;
+        background-color: $bg-color;
+      }
+    }
+  }
+}
+
+// icon mixin
+
+@mixin icon-style(
+  $element,
+  $modifier,
+  $icon,
+  $font-size: null,
+  $font-weight: null,
+  $margin: null,
+  $padding: null,
+  $color: null,
+  $transform-x: null,
+  $transform-y: null
+) {
+  @include e(#{$element}) {
+    @include m(#{$modifier}) {
+      font-family: "icomoon" !important;
+      margin: $margin;
+      padding: $padding;
+      font-size: $font-size;
+      font-weight: $font-weight;
+
+      &:before {
+        content: icon($icon);
+        color: $color;
+        display: inline-block;
+
+        @if $transform-x and $transform-y {
+          transform: translate(#{$transform-x}, #{$transform-y});
+        } @else {
+          @if $transform-x {
+            transform: translateX(#{$transform-x});
+          }
+          @if $transform-y {
+            transform: translateY(#{$transform-y});
+          }
+        }
+      }
+    }
+  }
+}

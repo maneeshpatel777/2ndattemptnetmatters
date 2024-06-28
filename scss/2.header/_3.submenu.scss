@@ -1,0 +1,37 @@
+/* Dropdown styles */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #67809f;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.nav-item:hover .submenu {
+  display: block;
+}
+
+.submenu-grid {
+  display: grid;
+  justify-items: start;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.submenu-grid h2 {
+  grid-area: heading;
+  color: white;
+}
+
+.submenu-grid li {
+  margin: 0;
+  padding: 10px;
+
+  border-radius: 5px;
+  color: white;
+}

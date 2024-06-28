@@ -1,0 +1,63 @@
+#navbar {
+  position: relative;
+  background-color: #333;
+  padding: 10px 0;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  position: static;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 18px;
+
+  &:hover {
+    [class^="icon__nav-bar"] {
+      &:before {
+        color: white;
+      }
+    }
+  }
+
+  //@include nav-item-hover(bespoke, #67809f);
+}
+
+.nav-item--bespoke {
+  &:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -43px;
+    left: 0;
+    width: 100%;
+    height: 43px;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    background-color: red;
+    z-index: 2;
+  }
+}
+
+.nav-item small {
+  font-size: 0.625rem;
+  display: inline-block;
+  transform: translateY(8px);
+}
+
+.icon {
+  @include icon-style(nav-bar, bespoke, laptop2, 1.438rem, null, null, null, #67809f, null, 10px);
+  @include icon-style(nav-bar, it-support, monitor, 1.438rem, null, null, null, #4183d7, null, 10px);
+  @include icon-style(nav-bar, digital-marketing, signal, 1.438rem, null, null, null, #2ecc71, null, 10px);
+  @include icon-style(nav-bar, telecoms-services, phone-ring, 1.438rem, null, null, null, #d64542, null, 10px);
+  @include icon-style(nav-bar, web-design, code, 1.438rem, null, null, null, #9270b1, null, 10px);
+  @include icon-style(nav-bar, cyber-security, shield, 1.438rem, null, null, null, #f6255a, null, 10px);
+  @include icon-style(nav-bar, developer-course, diploma-hat, 1.438rem, null, null, null, #cf4126, null, 10px);
+}

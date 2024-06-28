@@ -1,0 +1,76 @@
+#header-top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 110px;
+  padding: 20px 0;
+}
+
+//
+// Logo (do later)
+//
+
+#header-top img {
+}
+
+//
+// Search bar (do later)
+//
+
+//
+// Buttons
+//
+
+#header-top-buttons-flex {
+  display: flex;
+}
+
+.header-top-buttons {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 5px 15px;
+  margin-left: 20px;
+  color: white;
+  padding: 6px 16px;
+  height: 56px;
+  font-size: 1.125rem;
+}
+
+#header-support-button {
+  background-color: map-get($colors, "header-top-button-support-hover-off");
+  &:hover {
+    background-color: map-get($colors, "header-top-button-support-hover-on");
+  }
+}
+
+#header-contact-button {
+  background-color: map-get($colors, "header-top-button-contact-hover-off");
+  &:hover {
+    background-color: map-get($colors, "header-top-button-contact-hover-on");
+  }
+}
+
+#header-search-button {
+  background-color: map-get($colors, "header-top-button-search-hover-off");
+  &:hover {
+    background-color: map-get($colors, "header-top-button-search-hover-on");
+  }
+}
+
+#header-nav-button {
+  background-color: map-get($colors, "header-top-button-nav-hover-off");
+  &:hover {
+    background-color: map-get($colors, "header-top-button-nav-hover-on");
+  }
+}
+
+.icon {
+  @include icon-style(header-top, support, mouse, 1.438rem, null, 0 5px 0 0, null, null);
+  @include icon-style(header-top, contact, paper-plane, 1.438rem, null, 0 5px 0 0, null, null);
+  @include icon-style(header-top, search, magnify-glass, 2.1rem, 900, 0 5px 0 0, null, null);
+  @include icon-style(header-top, nav, three-lines, 2.1rem, 900, 0 5px 0 0, null, null);
+}

@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.ttf") format("truetype");
+
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/poppins-v15-latin-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/poppins-v15-latin-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+$font-icons: (
+  //
+  // header-top
+  //
+  mouse: "\e906",
+  paper-plane: "\e907",
+  magnify-glass: "\e904",
+  three-lines: "\e9BD",
+  //
+  // nav-bar
+  //
+  laptop2: "\e957",
+  monitor: "\e956",
+  signal: "\e901",
+  phone-ring: "\e900",
+  code: "\eA80",
+  shield: "\e903",
+  diploma-hat: "\e902",
+  //
+  quote-bubble: "\e905",
+  shuffle-arrows: "\e908",
+  transfer-arrows: "\e909",
+  //
+  globe: "\e90A",
+  cloud-download: "\e90B",
+  cogs: "\e90C",
+  briefcase: "\e90D",
+  laptop: "\e90E",
+  group: "\e90F",
+  //
+  hard-drive: "\e910",
+  headphones: "\e911",
+  money: "\e912",
+  mail: "\e913",
+  pencil: "\e914",
+  graph-arrow: "\e915",
+  handshake: "\e916",
+  phone-square: "\e917",
+  speed-test: "\e918",
+  trolley: "\e919",
+  //
+  megaphone: "\e91A",
+  paper-folded-corner: "\e91B",
+  padlock: "\e91C",
+  clock: "\e91D",
+  vial: "\e91E",
+  question-mark: "\e91F",
+  //
+  folder: "\e930",
+  ticket: "\e939",
+  phone: "\e942",
+
+  mobile: "\e958",
+
+  cloud: "\e9C1",
+  download-server-box: "\e9C7",
+  star: "\e9D9",
+  arrow-up: "\eA3A",
+  arrow-right: "\eA3C",
+  arrow-down: "\eA3E",
+  arrow-left: "\eA40",
+
+  facebook: "\eA90",
+  instagram: "\eA92",
+  twitter: "\eA96",
+  linkedin: "\eACA"
+);
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
