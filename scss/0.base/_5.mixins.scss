@@ -76,7 +76,7 @@
 
 // hover over nav item
 
-@mixin nav-item-hover($nav-element, $bg-color) {
+@mixin nav-item-hover($nav-element, $bg-color, $translate-x: null) {
   &--#{$nav-element} {
     &:hover {
       background-color: $bg-color;
@@ -84,6 +84,9 @@
       &::after {
         @extend %nav-item-triangle;
         background-color: $bg-color;
+        color: $bg-color;
+
+        transform: translateX($translate-x);
       }
     }
   }
@@ -91,18 +94,7 @@
 
 // icon mixin
 
-@mixin icon-style(
-  $element,
-  $modifier,
-  $icon,
-  $font-size: null,
-  $font-weight: null,
-  $margin: null,
-  $padding: null,
-  $color: null,
-  $transform-x: null,
-  $transform-y: null
-) {
+@mixin icon-style($element, $modifier, $icon, $font-size: null, $font-weight: null, $margin: null, $padding: null, $color: null, $transform-x: null, $transform-y: null) {
   @include e(#{$element}) {
     @include m(#{$modifier}) {
       font-family: "icomoon" !important;

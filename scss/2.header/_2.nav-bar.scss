@@ -33,13 +33,13 @@
     }
   }
 
-  @include nav-item-hover(bespoke, color(bespoke-software-hover));
-  @include nav-item-hover(it-support, color(it-support-hover));
-  @include nav-item-hover(digital-marketing, color(digital-marketing-hover));
-  @include nav-item-hover(telecoms-services, color(telecoms-services-hover));
-  @include nav-item-hover(web-design, color(web-design-hover));
-  @include nav-item-hover(cyber-security, color(cyber-security-hover));
-  @include nav-item-hover(developer-course, color(developer-course-hover));
+  @include nav-item-hover(bespoke, color(bespoke-software-hover), -350%);
+  @include nav-item-hover(it-support, color(it-support-hover), -250%);
+  @include nav-item-hover(digital-marketing, color(digital-marketing-hover), -150%);
+  @include nav-item-hover(telecoms-services, color(telecoms-services-hover), -50%);
+  @include nav-item-hover(web-design, color(web-design-hover), 50%);
+  @include nav-item-hover(cyber-security, color(cyber-security-hover), 150%);
+  @include nav-item-hover(developer-course, color(developer-course-hover), 250%);
 }
 
 .nav-item small {

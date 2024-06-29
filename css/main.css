@@ -478,31 +478,45 @@ body {
   .nav-item--bespoke:hover {
     background-color: #67809f; }
     .nav-item--bespoke:hover::after {
-      background-color: #67809f; }
+      background-color: #67809f;
+      color: #67809f;
+      transform: translateX(-350%); }
   .nav-item--it-support:hover {
     background-color: #4183d7; }
     .nav-item--it-support:hover::after {
-      background-color: #4183d7; }
+      background-color: #4183d7;
+      color: #4183d7;
+      transform: translateX(-250%); }
   .nav-item--digital-marketing:hover {
     background-color: #2ecc71; }
     .nav-item--digital-marketing:hover::after {
-      background-color: #2ecc71; }
+      background-color: #2ecc71;
+      color: #2ecc71;
+      transform: translateX(-150%); }
   .nav-item--telecoms-services:hover {
     background-color: #d64541; }
     .nav-item--telecoms-services:hover::after {
-      background-color: #d64541; }
+      background-color: #d64541;
+      color: #d64541;
+      transform: translateX(-50%); }
   .nav-item--web-design:hover {
     background-color: #926fb1; }
     .nav-item--web-design:hover::after {
-      background-color: #926fb1; }
+      background-color: #926fb1;
+      color: #926fb1;
+      transform: translateX(50%); }
   .nav-item--cyber-security:hover {
     background-color: #f62459; }
     .nav-item--cyber-security:hover::after {
-      background-color: #f62459; }
+      background-color: #f62459;
+      color: #f62459;
+      transform: translateX(150%); }
   .nav-item--developer-course:hover {
     background-color: #ce4126; }
     .nav-item--developer-course:hover::after {
-      background-color: #ce4126; }
+      background-color: #ce4126;
+      color: #ce4126;
+      transform: translateX(250%); }
 
 .nav-item small {
   font-size: 0.625rem;
@@ -573,7 +587,7 @@ body {
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: #67809f;
+  background-color: black;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1; }
 
