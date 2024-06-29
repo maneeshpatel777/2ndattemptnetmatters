@@ -1,7 +1,6 @@
 #navbar {
   position: relative;
-  background-color: #333;
-  padding: 10px 0;
+  background-color: color(nav-bar-background);
 }
 
 .nav-list {
@@ -17,9 +16,14 @@
   color: white;
   text-align: center;
   padding: 12px;
+  width: 167px;
   cursor: pointer;
   text-transform: uppercase;
   font-size: 18px;
+
+  a {
+    color: white;
+  }
 
   &:hover {
     [class^="icon__nav-bar"] {
@@ -29,21 +33,13 @@
     }
   }
 
-  //@include nav-item-hover(bespoke, #67809f);
-}
-
-.nav-item--bespoke {
-  &:hover::after {
-    content: "";
-    position: absolute;
-    bottom: -43px;
-    left: 0;
-    width: 100%;
-    height: 43px;
-    clip-path: polygon(50% 100%, 0 0, 100% 0);
-    background-color: red;
-    z-index: 2;
-  }
+  @include nav-item-hover(bespoke, color(bespoke-software-hover));
+  @include nav-item-hover(it-support, color(it-support-hover));
+  @include nav-item-hover(digital-marketing, color(digital-marketing-hover));
+  @include nav-item-hover(telecoms-services, color(telecoms-services-hover));
+  @include nav-item-hover(web-design, color(web-design-hover));
+  @include nav-item-hover(cyber-security, color(cyber-security-hover));
+  @include nav-item-hover(developer-course, color(developer-course-hover));
 }
 
 .nav-item small {
@@ -53,11 +49,11 @@
 }
 
 .icon {
-  @include icon-style(nav-bar, bespoke, laptop2, 1.438rem, null, null, null, #67809f, null, 10px);
-  @include icon-style(nav-bar, it-support, monitor, 1.438rem, null, null, null, #4183d7, null, 10px);
-  @include icon-style(nav-bar, digital-marketing, signal, 1.438rem, null, null, null, #2ecc71, null, 10px);
-  @include icon-style(nav-bar, telecoms-services, phone-ring, 1.438rem, null, null, null, #d64542, null, 10px);
-  @include icon-style(nav-bar, web-design, code, 1.438rem, null, null, null, #9270b1, null, 10px);
-  @include icon-style(nav-bar, cyber-security, shield, 1.438rem, null, null, null, #f6255a, null, 10px);
-  @include icon-style(nav-bar, developer-course, diploma-hat, 1.438rem, null, null, null, #cf4126, null, 10px);
+  @include icon-style(nav-bar, bespoke, laptop2, 1.438rem, null, null, null, color(bespoke-software-icon), null, 10px);
+  @include icon-style(nav-bar, it-support, monitor, 1.438rem, null, null, null, color(it-support-icon), null, 10px);
+  @include icon-style(nav-bar, digital-marketing, signal, 1.438rem, null, null, null, color(digital-marketing-icon), null, 10px);
+  @include icon-style(nav-bar, telecoms-services, phone-ring, 1.438rem, null, null, null, color(telecoms-services-icon), null, 10px);
+  @include icon-style(nav-bar, web-design, code, 1.438rem, null, null, null, color(web-design-icon), null, 10px);
+  @include icon-style(nav-bar, cyber-security, shield, 1.438rem, null, null, null, color(cyber-security-icon), null, 10px);
+  @include icon-style(nav-bar, developer-course, diploma-hat, 1.438rem, null, null, null, color(developer-course-icon), null, 10px);
 }

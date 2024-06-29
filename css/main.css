@@ -363,6 +363,15 @@ body {
   font-size: 1rem;
   letter-spacing: 0.4px; }
 
+.nav-item--bespoke:hover::after, .nav-item--it-support:hover::after, .nav-item--digital-marketing:hover::after, .nav-item--telecoms-services:hover::after, .nav-item--web-design:hover::after, .nav-item--cyber-security:hover::after, .nav-item--developer-course:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -43px;
+  left: 0;
+  width: 100%;
+  height: 43px;
+  clip-path: polygon(50% 100%, 0 0, 100% 0); }
+
 #header-top {
   display: flex;
   justify-content: space-around;
@@ -440,8 +449,7 @@ body {
 
 #navbar {
   position: relative;
-  background-color: #333;
-  padding: 10px 0; }
+  background-color: #343645; }
 
 .nav-list {
   display: flex;
@@ -455,22 +463,42 @@ body {
   color: white;
   text-align: center;
   padding: 12px;
+  width: 167px;
   cursor: pointer;
   text-transform: uppercase;
   font-size: 18px; }
+  .nav-item a {
+    color: white; }
   .nav-item:hover [class^="icon__nav-bar"]:before {
     color: white; }
-
-.nav-item--bespoke:hover::after {
-  content: "";
-  position: absolute;
-  bottom: -43px;
-  left: 0;
-  width: 100%;
-  height: 43px;
-  clip-path: polygon(50% 100%, 0 0, 100% 0);
-  background-color: red;
-  z-index: 2; }
+  .nav-item--bespoke:hover {
+    background-color: #67809f; }
+    .nav-item--bespoke:hover::after {
+      background-color: #67809f; }
+  .nav-item--it-support:hover {
+    background-color: #4183d7; }
+    .nav-item--it-support:hover::after {
+      background-color: #4183d7; }
+  .nav-item--digital-marketing:hover {
+    background-color: #2ecc71; }
+    .nav-item--digital-marketing:hover::after {
+      background-color: #2ecc71; }
+  .nav-item--telecoms-services:hover {
+    background-color: #d64541; }
+    .nav-item--telecoms-services:hover::after {
+      background-color: #d64541; }
+  .nav-item--web-design:hover {
+    background-color: #926fb1; }
+    .nav-item--web-design:hover::after {
+      background-color: #926fb1; }
+  .nav-item--cyber-security:hover {
+    background-color: #f62459; }
+    .nav-item--cyber-security:hover::after {
+      background-color: #f62459; }
+  .nav-item--developer-course:hover {
+    background-color: #ce4126; }
+    .nav-item--developer-course:hover::after {
+      background-color: #ce4126; }
 
 .nav-item small {
   font-size: 0.625rem;
