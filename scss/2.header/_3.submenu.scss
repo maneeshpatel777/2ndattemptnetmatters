@@ -5,7 +5,7 @@
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: black;
+  background-color: red;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
@@ -34,4 +34,111 @@
 
   border-radius: 5px;
   color: white;
+}
+
+.icon {
+  // Bespoke
+  @include icon-style(bespoke-software-submenu, crm, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(bespoke-software-submenu, mobile-app, mobile, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(bespoke-software-submenu, operational-systems, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(bespoke-software-submenu, intranet, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(bespoke-software-submenu, automation, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(bespoke-software-submenu, databases, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(bespoke-software-submenu, implementation, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(bespoke-software-submenu, portal, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(bespoke-software-submenu, integrations, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(bespoke-software-submenu, sharepoint, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(bespoke-software-submenu, iot, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(bespoke-software-submenu, reporting, cogs, 1.438rem, null, null, null, null, null, 10px);
+  //IT-Support
+  @include icon-style(it-support-submenu, managed-it, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(it-support-submenu, business-it, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(it-support-submenu, office-365, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(it-support-submenu, cloud, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(it-support-submenu, backup, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(it-support-submenu, consultancy, cogs, 1.438rem, null, null, null, null, null, 10px);
+  //Digital Marketing
+  @include icon-style(digital-marketing-submenu, seo, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(digital-marketing-submenu, ppc, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(digital-marketing-submenu, cro, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(digital-marketing-submenu, email, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(digital-marketing-submenu, social-media, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(digital-marketing-submenu, content, cogs, 1.438rem, null, null, null, null, null, 10px);
+  //Telecoms Services
+  @include icon-style(telecoms-services-submenu, business-mobile, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(telecoms-services-submenu, hosted-voip, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(telecoms-services-submenu, business-voip, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(telecoms-services-submenu, business-broadband, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(telecoms-services-submenu, leased-lines, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(telecoms-services-submenu, 3cx, cogs, 1.438rem, null, null, null, null, null, 10px);
+  //Web-design
+  @include icon-style(web-design-submenu, bespoke-website, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(web-design-submenu, ecommerce-website, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(web-design-submenu, pay-monthly-websites, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(web-design-submenu, branding-design, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(web-design-submenu, mobile-app, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(web-design-submenu, web-hosting, cogs, 1.438rem, null, null, null, null, null, 10px);
+  //Cyber Security
+  @include icon-style(cyber-security-submenu, assessment, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(cyber-security-submenu, management, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(cyber-security-submenu, penetration-testing, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(cyber-security-submenu, essentials-certification, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(cyber-security-submenu, pci-compliance, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(cyber-security-submenu, hacking-prevention, cogs, 1.438rem, null, null, null, null, null, 10px);
+  //Developer Course
+  @include icon-style(developer-course-submenu, train-for-career, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(developer-course-submenu, skills-bootcamp, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(developer-course-submenu, scion-faq, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(developer-course-submenu, scion-collaborators, cogs, 1.438rem, null, null, null, null, null, 10px);
+}
+
+#bespoke-software-grid {
+  grid-template-areas:
+    "heading heading heading"
+    "crm automation integrations"
+    "mobile-app databases sharepoint"
+    "operational-systems implementation iot"
+    "intranet portal reporting";
+}
+
+#it-support-grid {
+  grid-template-areas:
+    "heading heading heading"
+    "managed-it business-it office-365"
+    "consultancy cloud backup";
+}
+
+#digital-marketing-grid {
+  grid-template-areas:
+    "heading heading heading"
+    "seo ppc cro"
+    "email social-media content";
+}
+
+#telecoms-services-grid {
+  grid-template-areas:
+    "heading heading heading"
+    "business-mobile hosted-voip business-voip"
+    "business-broadband leased-lines 3cx";
+}
+
+#web-design-grid {
+  grid-template-areas:
+    "heading heading heading"
+    "bespoke-website ecommerce-website pay-monthly-websites"
+    "branding-design mobile-app web-hosting";
+}
+
+#cyber-security-grid {
+  grid-template-areas:
+    "heading heading heading"
+    "assessment management penetration-testing"
+    "essentials-certification pci-compliance hacking-prevention";
+}
+
+#developer-course-grid {
+  grid-template-areas:
+    "heading heading heading"
+    "train-for-career skills-bootcamp scion-faq"
+    "scion-collaborators scion-collaborators scion-collaborators";
 }
