@@ -14,12 +14,7 @@
 
   <style>
   
-
-  
-
-
-
-/* media queries test */
+/* media queries test
 @media (max-width: 768px) {
   .nav-list {
     flex-direction: column;
@@ -32,7 +27,7 @@
   .submenu-grid {
     grid-template-columns: 1fr;
   }
-}
+} */
 
 #bespoke-software-grid {
     grid-template-areas:
@@ -48,6 +43,42 @@
       "managed-it business-it office-365"
       "consultancy cloud backup";
   }
+
+  #digital-marketing-grid {
+    grid-template-areas:
+    "heading heading heading"
+    "seo ppc cro"
+    "email social-media content";
+}
+
+#telecoms-services-grid {
+    grid-template-areas:
+    "heading heading heading"
+    "business-mobile hosted-voip business-voip"
+    "business-broadband leased-lines 3cx";
+}
+
+#web-design-grid {
+    grid-template-areas:
+    "heading heading heading"
+    "bespoke-website ecommerce-website pay-monthly-websites"
+    "branding-design mobile-app web-hosting";
+}
+
+#cyber-security-grid {
+  grid-template-areas:
+    "heading heading heading"
+    "cyber-security-assessment cyber-security-management cyber-penetration-testing"
+    "cyber-essentials-certification pci-compliance hacking-prevention";
+}
+
+#developer-course-grid {
+  grid-template-areas:
+    "heading heading heading"
+    "train-for-career skills-bootcamp scion-faq"
+    "scion-collaborators scion-collaborators scion-collaborators";
+}
+
 
   </style>
 </head>
@@ -77,6 +108,7 @@
               <small>Bespoke</small><br />
               Software
             </a>
+
               <div class="submenu">
                 <ul class="submenu-grid" id="bespoke-software-grid">
                   <h2 style="grid-area: heading">Our Bespoke Software Services</h2>
@@ -94,6 +126,7 @@
                   <li style="grid-area: reporting">Reporting Hub</li>
                 </ul>
               </div>
+
             </li>
             
             <li class="nav-item nav-item--it-support">
@@ -101,6 +134,7 @@
               <span class="icon__nav-bar--it-support"></span><br />
               <small>IT</small><br />
               Support</a>
+
               <div class="submenu">
                 <ul class="submenu-grid" id="it-support-grid">
                   <h2 style="grid-area: heading">Our IT Support Services</h2>
@@ -112,6 +146,7 @@
                   <li style="grid-area: backup">Data Backup &amp; Disaster Recovery</li>
                 </ul>
               </div>
+
             </li>
             
             <li class="nav-item nav-item--digital-marketing">
@@ -119,6 +154,19 @@
               <span class="icon__nav-bar--digital-marketing"></span><br />
               <small>Digital</small><br />
               Marketing</a>
+
+              <div class="submenu">
+                <ul class="submenu-grid" id="digital-marketing-grid">
+                  <h2 style="grid-area: heading">Our Digital Marketing Services</h2>
+                  <li style="grid-area: seo">Search Engine Optimisation (SEO)</li>
+                  <li style="grid-area: ppc">Pay Per Click Advertising (PPC)</li>
+                  <li style="grid-area: cro">Conversion Rate Optimisation (CRO)</li>
+                  <li style="grid-area: email">Email Marketing</li>
+                  <li style="grid-area: social-media">Social Media Marketing</li>
+                  <li style="grid-area: content">Content Marketing</li>
+                </ul>
+              </div>
+
             </li>
             
             <li class="nav-item nav-item--telecoms-services">
@@ -126,6 +174,19 @@
               <span class="icon__nav-bar--telecoms-services"></span><br />
               <small>Telecoms</small><br />
               Services</a>
+
+              <div class="submenu">
+                <ul class="submenu-grid" id="telecoms-services-grid">
+                  <h2 style="grid-area: heading">Our Telecoms Services</h2>
+                  <li style="grid-area: business-mobile">Business Mobile</li>
+                  <li style="grid-area: hosted-voip">Hosted VoIP Provider</li>
+                  <li style="grid-area: business-voip">Business VoIP Systems</li>
+                  <li style="grid-area: business-broadband">Business Broadband</li>
+                  <li style="grid-area: leased-lines">Leased Lines Provider</li>
+                  <li style="grid-area: 3cx">3CX Systems</li>
+                </ul>
+              </div>
+
             </li>
             
             <li class="nav-item nav-item--web-design">
@@ -133,6 +194,19 @@
               <span class="icon__nav-bar--web-design"></span><br />
               <small>Web</small><br />
               Design</a>
+
+              <div class="submenu">
+                <ul class="submenu-grid" id="web-design-grid">
+                  <h2 style="grid-area: heading">Our Web Design Services</h2>
+                  <li style="grid-area: bespoke-website">Bespoke Website Design</li>
+                  <li style="grid-area: ecommerce-website">eCommerce Website Design</li>
+                  <li style="grid-area: pay-monthly-websites">Pay Monthly Websites</li>
+                  <li style="grid-area: branding-design">Branding &amp; Design</li>
+                  <li style="grid-area: mobile-app">Mobile App Development</li>
+                  <li style="grid-area: web-hosting">Web Hosting</li>
+                </ul>
+              </div>
+
             </li>
             
             <li class="nav-item nav-item--cyber-security">
@@ -140,6 +214,19 @@
               <span class="icon__nav-bar--cyber-security"></span><br />
               <small>Cyber</small><br />
               Security</a>
+
+              <div class="submenu">
+                <ul class="submenu-grid" id="cyber-security-grid">
+                  <h2 style="grid-area: heading">Our Cyber Security Services</h2>
+                  <li style="grid-area: cyber-security-assessment">Cyber Security Assessment</li>
+                  <li style="grid-area: cyber-security-management">Cyber Security Management</li>
+                  <li style="grid-area: cyber-penetration-testing">Cyber Penetration Testing</li>
+                  <li style="grid-area: cyber-essentials-certification">Cyber Essentials Certification</li>
+                  <li style="grid-area: pci-compliance">PCI Compliance</li>
+                  <li style="grid-area: hacking-prevention">Hacking Prevention</li>
+                </ul>
+              </div>
+
             </li>
             
             <li class="nav-item nav-item--developer-course">
@@ -147,6 +234,17 @@
               <span class="icon__nav-bar--developer-course"></span><br />
               <small>Developer</small><br />
               Course</a>
+
+              <div class="submenu">
+                <ul class="submenu-grid" id="developer-course-grid">
+                  <h2 style="grid-area: heading">Our Developer Course Services</h2>
+                  <li style="grid-area: train-for-career">Train For A Career In Tech</li>
+                  <li style="grid-area: skills-bootcamp">Skills Bootcamp</li>
+                  <li style="grid-area: scion-faq">Scion Scheme Frequently Asked Questions</li>
+                  <li style="grid-area: scion-collaborators">Scion Collaborators</li>
+                </ul>
+              </div>
+
             </li>
           </ul>
         </nav>
