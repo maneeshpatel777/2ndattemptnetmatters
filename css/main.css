@@ -378,7 +378,7 @@ body {
 
 #header-top {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   height: 110px;
   padding: 20px 0; }
@@ -618,12 +618,12 @@ body {
   padding: 20px;
   color: white; }
 
-.submenu-grid h2 {
+.submenu-heading {
   grid-area: heading;
   font-size: 2rem;
   font-weight: 500; }
 
-.submenu-grid li {
+.submenu-grid li:not(.submenu-heading) {
   margin: 10px 0 0 -10px;
   padding: 10px;
   font-size: 1.2rem; }

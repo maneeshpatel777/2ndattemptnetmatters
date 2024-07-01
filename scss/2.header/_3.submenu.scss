@@ -47,13 +47,13 @@
   color: white;
 }
 
-.submenu-grid h2 {
+.submenu-heading {
   grid-area: heading;
   font-size: 2rem;
   font-weight: 500;
 }
 
-.submenu-grid li {
+.submenu-grid li:not(.submenu-heading) {
   //margin-top: 10px;
   margin: 10px 0 0 -10px;
   padding: 10px;
