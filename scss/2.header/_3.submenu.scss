@@ -38,58 +38,58 @@
 
 .icon {
   // Bespoke
-  @include icon-style(bespoke-software-submenu, crm, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(bespoke-software-submenu, mobile-app, mobile, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(bespoke-software-submenu, operational-systems, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(bespoke-software-submenu, intranet, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(bespoke-software-submenu, automation, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(bespoke-software-submenu, databases, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(bespoke-software-submenu, implementation, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(bespoke-software-submenu, portal, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(bespoke-software-submenu, integrations, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(bespoke-software-submenu, sharepoint, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(bespoke-software-submenu, iot, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(bespoke-software-submenu, reporting, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(bespoke-software-submenu, crm, cogs, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(bespoke-software-submenu, mobile-app, mobile, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(bespoke-software-submenu, operational-systems, download-server-box, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(bespoke-software-submenu, intranet, cloud, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(bespoke-software-submenu, automation, briefcase, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(bespoke-software-submenu, databases, folder, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(bespoke-software-submenu, implementation, group, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(bespoke-software-submenu, portal, cloud-download, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(bespoke-software-submenu, integrations, shuffle-arrows, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(bespoke-software-submenu, sharepoint, transfer-arrows, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(bespoke-software-submenu, iot, laptop, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(bespoke-software-submenu, reporting, globe, 1.2rem, null, 0 10px 0 0, null, null, null, null);
   //IT-Support
-  @include icon-style(it-support-submenu, managed-it, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(it-support-submenu, business-it, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(it-support-submenu, office-365, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(it-support-submenu, cloud, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(it-support-submenu, backup, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(it-support-submenu, consultancy, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(it-support-submenu, managed-it, headphones, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(it-support-submenu, business-it, briefcase, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(it-support-submenu, office-365, laptop, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(it-support-submenu, consultancy, diploma-hat, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(it-support-submenu, cloud, cloud, 1.2rem, null, null, 0 10px 0 0, null, null, null);
+  @include icon-style(it-support-submenu, backup, hard-drive, 1.2rem, null, null, 0 10px 0 0, null, null, null);
   //Digital Marketing
-  @include icon-style(digital-marketing-submenu, seo, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(digital-marketing-submenu, ppc, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(digital-marketing-submenu, cro, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(digital-marketing-submenu, email, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(digital-marketing-submenu, social-media, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(digital-marketing-submenu, content, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(digital-marketing-submenu, seo, magnify-glass, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(digital-marketing-submenu, ppc, money, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(digital-marketing-submenu, cro, graph-arrow, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(digital-marketing-submenu, email, mail, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(digital-marketing-submenu, social-media, group, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(digital-marketing-submenu, content, pencil, 1.2rem, null, 0 10px 0 0, null, null, null, null);
   //Telecoms Services
-  @include icon-style(telecoms-services-submenu, business-mobile, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(telecoms-services-submenu, hosted-voip, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(telecoms-services-submenu, business-voip, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(telecoms-services-submenu, business-broadband, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(telecoms-services-submenu, leased-lines, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(telecoms-services-submenu, 3cx, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(telecoms-services-submenu, business-mobile, ticket, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(telecoms-services-submenu, hosted-voip, phone, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(telecoms-services-submenu, business-voip, phone-square, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(telecoms-services-submenu, business-broadband, speed-test, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(telecoms-services-submenu, leased-lines, handshake, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(telecoms-services-submenu, 3cx, phone-ring, 1.2rem, null, 0 10px 0 0, null, null, null, null);
   //Web-design
-  @include icon-style(web-design-submenu, bespoke-website, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(web-design-submenu, ecommerce-website, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(web-design-submenu, pay-monthly-websites, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(web-design-submenu, branding-design, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(web-design-submenu, mobile-app, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(web-design-submenu, web-hosting, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(web-design-submenu, bespoke-website, pencil, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(web-design-submenu, ecommerce-website, trolley, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(web-design-submenu, pay-monthly-websites, monitor, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(web-design-submenu, branding-design, megaphone, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(web-design-submenu, mobile-app, mobile, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(web-design-submenu, web-hosting, cloud, 1.2rem, null, 0 10px 0 0, null, null, null, null);
   //Cyber Security
-  @include icon-style(cyber-security-submenu, assessment, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(cyber-security-submenu, management, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(cyber-security-submenu, penetration-testing, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(cyber-security-submenu, essentials-certification, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(cyber-security-submenu, pci-compliance, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(cyber-security-submenu, hacking-prevention, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(cyber-security-submenu, assessment, paper-folded-corner, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(cyber-security-submenu, management, clock, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(cyber-security-submenu, penetration-testing, vial, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(cyber-security-submenu, essentials-certification, diploma-hat, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(cyber-security-submenu, pci-compliance, shield, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(cyber-security-submenu, hacking-prevention, padlock, 1.2rem, null, 0 10px 0 0, null, null, null, null);
   //Developer Course
-  @include icon-style(developer-course-submenu, train-for-career, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(developer-course-submenu, skills-bootcamp, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(developer-course-submenu, scion-faq, cogs, 1.438rem, null, null, null, null, null, 10px);
-  @include icon-style(developer-course-submenu, scion-collaborators, cogs, 1.438rem, null, null, null, null, null, 10px);
+  @include icon-style(developer-course-submenu, train-for-career, laptop, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(developer-course-submenu, skills-bootcamp, code, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(developer-course-submenu, scion-faq, question-mark, 1.2rem, null, 0 10px 0 0, null, null, null, null);
+  @include icon-style(developer-course-submenu, scion-collaborators, handshake, 1.2rem, null, 0 10px 0 0, null, null, null, null);
 }
 
 #bespoke-software-grid {
