@@ -39,7 +39,26 @@
             <div id="header-top-buttons-flex">
               <button class="header-top-buttons" id="header-support-button"><span class="icon__header-top--support"></span>Support</button>
               <button class="header-top-buttons" id="header-contact-button"><span class="icon__header-top--contact"></span>Contact</button>
-              <button class="header-top-buttons" id="header-search-button"><span class="icon__header-top--search"></span></button>
+
+              <!-- <div class="hidden-xs pull-left search-form-wrapper--tablet">
+                <form method="GET" action="https://www.netmatters.co.uk/search" accept-charset="UTF-8" class="search-form">
+                  <label for="search-input" class="hidden">Search:</label>
+                  <input class="form-control search-bar" placeholder="Search..." id="search-input" name="keyword" type="text" value="" /><button type="submit" id="search-submit">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                  </button>
+                </form>
+              </div> -->
+
+              <div>
+                <form class="search-form-flex" method="GET" action="https://www.netmatters.co.uk/search" accept-charset="UTF-8">
+                  <label for="search-input" class="hidden">Search:</label>
+                  <input class="search-bar" placeholder="Search..." id="search-input" name="keyword" type="text" value="" />
+                  <button type="submit" class="header-top-buttons" id="header-search-button">
+                    <span class="icon__header-top--search"></span>
+                  </button>
+                </form>
+              </div>
+
               <button class="header-top-buttons" id="header-nav-button"><span class="icon__header-top--nav"></span></button>
             </div>
           </div>

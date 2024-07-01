@@ -11,11 +11,33 @@
 //
 
 #header-top img {
+  padding: 0 15px;
+  max-width: 100%;
 }
 
 //
 // Search bar (do later)
 //
+
+.search-form-flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+.search-bar {
+  //display: inline-block !important;
+  width: 240px;
+  border: #cccccc 1px solid;
+  font-size: 14px;
+  line-height: 1.42857143;
+  padding: 17px 15px;
+  //transform: translateY(-10px);
+  margin-left: 21px;
+}
+
+.hidden {
+  display: none;
+}
 
 //
 // Buttons
@@ -23,10 +45,12 @@
 
 #header-top-buttons-flex {
   display: flex;
+  padding: 0 15px;
+  align-items: center;
 }
 
 .header-top-buttons {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   text-transform: uppercase;
   text-align: center;
@@ -56,6 +80,8 @@
 
 #header-search-button {
   background-color: map-get($colors, "header-top-button-search-hover-off");
+  margin-left: -5px;
+  border-radius: 0 3px 3px 0;
   &:hover {
     background-color: map-get($colors, "header-top-button-search-hover-on");
   }
@@ -71,6 +97,6 @@
 .icon {
   @include icon-style(header-top, support, mouse, 1.438rem, null, 0 5px 0 0, null, null);
   @include icon-style(header-top, contact, paper-plane, 1.438rem, null, 0 5px 0 0, null, null);
-  @include icon-style(header-top, search, magnify-glass, 2.1rem, 900, 0 5px 0 0, null, null);
+  @include icon-style(header-top, search, magnify-glass, 1.9rem, 900, 0 5px 0 0, null, null);
   @include icon-style(header-top, nav, three-lines, 2.1rem, 900, 0 5px 0 0, null, null);
 }
