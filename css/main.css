@@ -587,9 +587,24 @@ body {
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: red;
+  background-color: black;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1; }
+  z-index: 1;
+  text-transform: none; }
+  .submenu__bespoke {
+    background-color: #516781; }
+  .submenu__it-support {
+    background-color: #286abd; }
+  .submenu__digital-marketing {
+    background-color: #25a25a; }
+  .submenu__telecoms-services {
+    background-color: #bc2c28; }
+  .submenu__web-design {
+    background-color: #79539a; }
+  .submenu__cyber-security {
+    background-color: #de0a3f; }
+  .submenu__developer-course {
+    background-color: #a3321e; }
 
 .nav-item:hover .submenu {
   display: block; }
@@ -599,18 +614,19 @@ body {
   justify-items: start;
   gap: 20px;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px; }
+  margin: 33px 0px 0px 64px;
+  padding: 20px;
+  color: white; }
 
 .submenu-grid h2 {
   grid-area: heading;
-  color: white; }
+  font-size: 2rem;
+  font-weight: 500; }
 
 .submenu-grid li {
-  margin: 0;
+  margin: 10px 0 0 -10px;
   padding: 10px;
-  border-radius: 5px;
-  color: white; }
+  font-size: 1.2rem; }
 
 .icon__bespoke-software-submenu--crm {
   font-family: "icomoon" !important;

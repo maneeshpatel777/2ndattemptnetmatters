@@ -5,9 +5,32 @@
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: red;
+  background-color: black;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  text-transform: none;
+
+  @include e(bespoke) {
+    background-color: color(bespoke-software-submenu);
+  }
+  @include e(it-support) {
+    background-color: color(it-support-submenu);
+  }
+  @include e(digital-marketing) {
+    background-color: color(digital-marketing-submenu);
+  }
+  @include e(telecoms-services) {
+    background-color: color(telecoms-services-submenu);
+  }
+  @include e(web-design) {
+    background-color: color(web-design-submenu);
+  }
+  @include e(cyber-security) {
+    background-color: color(cyber-security-submenu);
+  }
+  @include e(developer-course) {
+    background-color: color(developer-course-submenu);
+  }
 }
 
 .nav-item:hover .submenu {
@@ -19,21 +42,22 @@
   justify-items: start;
   gap: 20px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 33px 0px 0px 64px;
   padding: 20px;
+  color: white;
 }
 
 .submenu-grid h2 {
   grid-area: heading;
-  color: white;
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 .submenu-grid li {
-  margin: 0;
+  //margin-top: 10px;
+  margin: 10px 0 0 -10px;
   padding: 10px;
-
-  border-radius: 5px;
-  color: white;
+  font-size: 1.2rem;
 }
 
 .icon {
