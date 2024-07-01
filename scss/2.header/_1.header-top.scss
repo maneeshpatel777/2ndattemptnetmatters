@@ -7,7 +7,7 @@
 }
 
 //
-// Logo (do later)
+// Logo
 //
 
 #header-top img {
@@ -16,7 +16,7 @@
 }
 
 //
-// Search bar (do later)
+// Search bar
 //
 
 .search-form-flex {
@@ -26,6 +26,7 @@
 
 .search-bar {
   //display: inline-block !important;
+  display: none;
   width: 240px;
   border: #cccccc 1px solid;
   font-size: 14px;
@@ -33,10 +34,10 @@
   padding: 17px 15px;
   //transform: translateY(-10px);
   margin-left: 21px;
-}
 
-.hidden {
-  display: none;
+  @include mq("large") {
+    display: inline-block !important;
+  }
 }
 
 //
@@ -98,5 +99,31 @@
   @include icon-style(header-top, support, mouse, 1.438rem, null, 0 5px 0 0, null, null);
   @include icon-style(header-top, contact, paper-plane, 1.438rem, null, 0 5px 0 0, null, null);
   @include icon-style(header-top, search, magnify-glass, 1.9rem, 900, 0 5px 0 0, null, null);
-  @include icon-style(header-top, nav, three-lines, 2.1rem, 900, 0 5px 0 0, null, null);
+  //  @include icon-style(header-top, nav, three-lines, 2.1rem, 900, 0 5px 0 0, null, null);
+}
+
+.hamburger-icon {
+  background-color: white;
+  width: 33px;
+  height: 4px;
+  display: block;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: "";
+    background-color: white;
+    width: 33px;
+    height: 4px;
+    position: absolute;
+    left: 0;
+  }
+
+  &:before {
+    top: -10px;
+  }
+
+  &:after {
+    top: 10px;
+  }
 }

@@ -363,6 +363,9 @@ body {
   font-size: 1rem;
   letter-spacing: 0.4px; }
 
+.hidden {
+  display: none; }
+
 .nav-item--bespoke:hover::after, .nav-item--it-support:hover::after, .nav-item--digital-marketing:hover::after, .nav-item--telecoms-services:hover::after, .nav-item--web-design:hover::after, .nav-item--cyber-security:hover::after, .nav-item--developer-course:hover::after {
   content: "";
   position: absolute;
@@ -392,15 +395,16 @@ body {
   align-items: center; }
 
 .search-bar {
+  display: none;
   width: 240px;
   border: #cccccc 1px solid;
   font-size: 14px;
   line-height: 1.42857143;
   padding: 17px 15px;
   margin-left: 21px; }
-
-.hidden {
-  display: none; }
+  @media (min-width: 1260px) {
+    .search-bar {
+      display: inline-block !important; } }
 
 #header-top-buttons-flex {
   display: flex;
@@ -465,21 +469,32 @@ body {
   .icon__header-top--search:before {
     content: "";
     display: inline-block; }
-.icon__header-top--nav {
-  font-family: "icomoon" !important;
-  margin: 0 5px 0 0;
-  font-size: 2.1rem;
-  font-weight: 900; }
-  .icon__header-top--nav:before {
-    content: "";
-    display: inline-block; }
+
+.hamburger-icon {
+  background-color: white;
+  width: 33px;
+  height: 4px;
+  display: block;
+  position: relative; }
+  .hamburger-icon:before, .hamburger-icon:after {
+    content: "";
+    background-color: white;
+    width: 33px;
+    height: 4px;
+    position: absolute;
+    left: 0; }
+  .hamburger-icon:before {
+    top: -10px; }
+  .hamburger-icon:after {
+    top: 10px; }
 
 #navbar {
+  display: none;
   position: relative;
   background-color: #343645; }
 
 .nav-list {
-  display: flex;
+  display: none;
   justify-content: center;
   list-style-type: none;
   margin: 0;
@@ -489,8 +504,8 @@ body {
   position: static;
   color: white;
   text-align: center;
-  padding: 12px;
-  width: 167px;
+  padding: 19px 0 18px 0;
+  width: 134px;
   cursor: pointer;
   text-transform: uppercase;
   font-size: 18px; }
@@ -603,6 +618,33 @@ body {
     display: inline-block;
     transform: translateY(10px); }
 
+@media (min-width: 992px) {
+  #navbar {
+    display: block; }
+
+  .nav-list {
+    display: flex; }
+
+  .nav-item--bespoke:hover::after,
+  .nav-item--it-support:hover::after,
+  .nav-item--digital-marketing:hover::after,
+  .nav-item--telecoms-services:hover::after,
+  .nav-item--web-design:hover::after,
+  .nav-item--cyber-security:hover::after,
+  .nav-item--developer-course:hover::after {
+    border-width: 35px 67px 0; } }
+@media (min-width: 1260px) {
+  .nav-item {
+    width: 167px; }
+
+  .nav-item--bespoke:hover::after,
+  .nav-item--it-support:hover::after,
+  .nav-item--digital-marketing:hover::after,
+  .nav-item--telecoms-services:hover::after,
+  .nav-item--web-design:hover::after,
+  .nav-item--cyber-security:hover::after,
+  .nav-item--developer-course:hover::after {
+    border-width: 35px 83.5px 0; } }
 /* Dropdown styles */
 .submenu {
   display: none;

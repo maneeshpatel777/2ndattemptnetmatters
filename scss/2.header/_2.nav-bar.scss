@@ -1,10 +1,12 @@
 #navbar {
+  display: none;
   position: relative;
   background-color: color(nav-bar-background);
 }
 
 .nav-list {
-  display: flex;
+  //  display: flex;
+  display: none;
   justify-content: center;
   list-style-type: none;
   margin: 0;
@@ -15,8 +17,8 @@
   position: static;
   color: white;
   text-align: center;
-  padding: 12px;
-  width: 167px;
+  padding: 19px 0 18px 0;
+  width: 134px;
   cursor: pointer;
   text-transform: uppercase;
   font-size: 18px;
@@ -56,4 +58,40 @@
   @include icon-style(nav-bar, web-design, code, 1.438rem, null, null, null, color(web-design-icon), null, 10px);
   @include icon-style(nav-bar, cyber-security, shield, 1.438rem, null, null, null, color(cyber-security-icon), null, 10px);
   @include icon-style(nav-bar, developer-course, diploma-hat, 1.438rem, null, null, null, color(developer-course-icon), null, 10px);
+}
+
+@include mq("medium") {
+  #navbar {
+    display: block; // Show on medium and larger screens
+  }
+
+  .nav-list {
+    display: flex; // Show on medium and larger screens
+  }
+
+  .nav-item--bespoke:hover::after,
+  .nav-item--it-support:hover::after,
+  .nav-item--digital-marketing:hover::after,
+  .nav-item--telecoms-services:hover::after,
+  .nav-item--web-design:hover::after,
+  .nav-item--cyber-security:hover::after,
+  .nav-item--developer-course:hover::after {
+    border-width: 35px 67px 0;
+  }
+}
+
+@include mq("large") {
+  .nav-item {
+    width: 167px; // New width for large screens
+  }
+
+  .nav-item--bespoke:hover::after,
+  .nav-item--it-support:hover::after,
+  .nav-item--digital-marketing:hover::after,
+  .nav-item--telecoms-services:hover::after,
+  .nav-item--web-design:hover::after,
+  .nav-item--cyber-security:hover::after,
+  .nav-item--developer-course:hover::after {
+    border-width: 35px 83.5px 0;
+  }
 }

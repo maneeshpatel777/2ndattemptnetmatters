@@ -53,20 +53,20 @@
 // Media Queries
 
 @mixin mq($break) {
-  @if $break == "small" {
-    @media (min-width: $brkpoint-sm) and (max-width: $brkpoint-md) {
+  @if $break == "xsmall" {
+    @media (min-width: $brkpoint-xsm) and (max-width: $brkpoint-sm) {
+      @content;
+    }
+  } @else if $break == "small" {
+    @media (min-width: $brkpoint-sm + 1) {
       @content;
     }
   } @else if $break == "medium" {
-    @media (min-width: $brkpoint-md + 1) {
+    @media (min-width: $brkpoint-md) {
       @content;
     }
   } @else if $break == "large" {
-    @media (min-width: $brkpoint-large) {
-      @content;
-    }
-  } @else if $break == "xlarge" {
-    @media (min-width: $brkpoint-xlarge) {
+    @media (min-width: $brkpoint-lg) {
       @content;
     }
   } @else {
