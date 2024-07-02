@@ -1,0 +1,174 @@
+/* Dropdown styles */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  text-transform: none;
+
+  @include e(bespoke) {
+    background-color: color(bespoke-software-submenu);
+  }
+  @include e(it-support) {
+    background-color: color(it-support-submenu);
+  }
+  @include e(digital-marketing) {
+    background-color: color(digital-marketing-submenu);
+  }
+  @include e(telecoms-services) {
+    background-color: color(telecoms-services-submenu);
+  }
+  @include e(web-design) {
+    background-color: color(web-design-submenu);
+  }
+  @include e(cyber-security) {
+    background-color: color(cyber-security-submenu);
+  }
+  @include e(developer-course) {
+    background-color: color(developer-course-submenu);
+  }
+}
+
+.nav-item:hover .submenu {
+  display: block;
+}
+
+.submenu-grid {
+  display: grid;
+  justify-items: start;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 33px 0px 0px 64px;
+  padding: 20px;
+  color: white;
+}
+
+.submenu-heading {
+  grid-area: heading;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.submenu-grid li:not(.submenu-heading) {
+  //margin-top: 10px;
+  margin: 10px 0 0 -10px;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+.icon {
+  // Bespoke
+  @include icon-style($element: bespoke-software-submenu, $modifier: crm, $icon: cogs, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: bespoke-software-submenu, $modifier: mobile-app, $icon: mobile, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: bespoke-software-submenu, $modifier: operational-systems, $icon: download-server-box, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: bespoke-software-submenu, $modifier: intranet, $icon: cloud, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: bespoke-software-submenu, $modifier: automation, $icon: briefcase, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: bespoke-software-submenu, $modifier: databases, $icon: folder, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: bespoke-software-submenu, $modifier: implementation, $icon: group, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: bespoke-software-submenu, $modifier: portal, $icon: cloud-download, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: bespoke-software-submenu, $modifier: integrations, $icon: shuffle-arrows, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: bespoke-software-submenu, $modifier: sharepoint, $icon: transfer-arrows, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: bespoke-software-submenu, $modifier: iot, $icon: laptop, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: bespoke-software-submenu, $modifier: reporting, $icon: globe, $font-size: 1.2rem, $margin: 0 10px 0 0);
+
+  // IT-Support
+  @include icon-style($element: it-support-submenu, $modifier: managed-it, $icon: headphones, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: it-support-submenu, $modifier: business-it, $icon: briefcase, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: it-support-submenu, $modifier: office-365, $icon: laptop, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: it-support-submenu, $modifier: consultancy, $icon: diploma-hat, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: it-support-submenu, $modifier: cloud, $icon: cloud, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: it-support-submenu, $modifier: backup, $icon: hard-drive, $font-size: 1.2rem, $margin: 0 10px 0 0);
+
+  // Digital Marketing
+  @include icon-style($element: digital-marketing-submenu, $modifier: seo, $icon: magnify-glass, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: digital-marketing-submenu, $modifier: ppc, $icon: money, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: digital-marketing-submenu, $modifier: cro, $icon: graph-arrow, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: digital-marketing-submenu, $modifier: email, $icon: mail, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: digital-marketing-submenu, $modifier: social-media, $icon: group, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: digital-marketing-submenu, $modifier: content, $icon: pencil, $font-size: 1.2rem, $margin: 0 10px 0 0);
+
+  // Telecoms Services
+  @include icon-style($element: telecoms-services-submenu, $modifier: business-mobile, $icon: ticket, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: telecoms-services-submenu, $modifier: hosted-voip, $icon: phone, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: telecoms-services-submenu, $modifier: business-voip, $icon: phone-square, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: telecoms-services-submenu, $modifier: business-broadband, $icon: speed-test, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: telecoms-services-submenu, $modifier: leased-lines, $icon: handshake, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: telecoms-services-submenu, $modifier: 3cx, $icon: phone-ring, $font-size: 1.2rem, $margin: 0 10px 0 0);
+
+  // Web Design
+  @include icon-style($element: web-design-submenu, $modifier: bespoke-website, $icon: pencil, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: web-design-submenu, $modifier: ecommerce-website, $icon: trolley, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: web-design-submenu, $modifier: pay-monthly-websites, $icon: monitor, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: web-design-submenu, $modifier: branding-design, $icon: megaphone, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: web-design-submenu, $modifier: mobile-app, $icon: mobile, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: web-design-submenu, $modifier: web-hosting, $icon: cloud, $font-size: 1.2rem, $margin: 0 10px 0 0);
+
+  // Cyber Security
+  @include icon-style($element: cyber-security-submenu, $modifier: assessment, $icon: paper-folded-corner, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: cyber-security-submenu, $modifier: management, $icon: clock, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: cyber-security-submenu, $modifier: penetration-testing, $icon: vial, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: cyber-security-submenu, $modifier: essentials-certification, $icon: diploma-hat, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: cyber-security-submenu, $modifier: pci-compliance, $icon: shield, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: cyber-security-submenu, $modifier: hacking-prevention, $icon: padlock, $font-size: 1.2rem, $margin: 0 10px 0 0);
+
+  // Developer Course
+  @include icon-style($element: developer-course-submenu, $modifier: train-for-career, $icon: laptop, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: developer-course-submenu, $modifier: skills-bootcamp, $icon: code, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: developer-course-submenu, $modifier: scion-faq, $icon: question-mark, $font-size: 1.2rem, $margin: 0 10px 0 0);
+  @include icon-style($element: developer-course-submenu, $modifier: scion-collaborators, $icon: handshake, $font-size: 1.2rem, $margin: 0 10px 0 0);
+}
+
+#bespoke-software-grid {
+  grid-template-areas:
+    "heading heading heading"
+    "crm automation integrations"
+    "mobile-app databases sharepoint"
+    "operational-systems implementation iot"
+    "intranet portal reporting";
+}
+
+#it-support-grid {
+  grid-template-areas:
+    "heading heading heading"
+    "managed-it business-it office-365"
+    "consultancy cloud backup";
+}
+
+#digital-marketing-grid {
+  grid-template-areas:
+    "heading heading heading"
+    "seo ppc cro"
+    "email social-media content";
+}
+
+#telecoms-services-grid {
+  grid-template-areas:
+    "heading heading heading"
+    "business-mobile hosted-voip business-voip"
+    "business-broadband leased-lines 3cx";
+}
+
+#web-design-grid {
+  grid-template-areas:
+    "heading heading heading"
+    "bespoke-website ecommerce-website pay-monthly-websites"
+    "branding-design mobile-app web-hosting";
+}
+
+#cyber-security-grid {
+  grid-template-areas:
+    "heading heading heading"
+    "assessment management penetration-testing"
+    "essentials-certification pci-compliance hacking-prevention";
+}
+
+#developer-course-grid {
+  grid-template-areas:
+    "heading heading heading"
+    "train-for-career skills-bootcamp scion-faq"
+    "scion-collaborators scion-collaborators scion-collaborators";
+}

@@ -1,0 +1,100 @@
+#navbar {
+  display: none;
+  position: relative;
+  background-color: color(nav-bar-background);
+}
+
+.nav-list {
+  display: none;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  position: static;
+  color: white;
+  text-align: center;
+  padding: 19px 0 18px 0;
+  width: 134px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 18px;
+
+  a {
+    color: white;
+  }
+
+  // Changes icons to white on hover
+  &:hover {
+    [class^="icon__nav-bar"] {
+      &:before {
+        color: white;
+      }
+    }
+  }
+
+  // Changes background color and creates triangle on hover
+  @include nav-item-hover($element: bespoke, $bg-color: color(bespoke-software-hover), $translate-x: -350%);
+  @include nav-item-hover($element: it-support, $bg-color: color(it-support-hover), $translate-x: -250%);
+  @include nav-item-hover($element: digital-marketing, $bg-color: color(digital-marketing-hover), $translate-x: -150%);
+  @include nav-item-hover($element: telecoms-services, $bg-color: color(telecoms-services-hover), $translate-x: -50%);
+  @include nav-item-hover($element: web-design, $bg-color: color(web-design-hover), $translate-x: 50%);
+  @include nav-item-hover($element: cyber-security, $bg-color: color(cyber-security-hover), $translate-x: 150%);
+  @include nav-item-hover($element: developer-course, $bg-color: color(developer-course-hover), $translate-x: 250%);
+}
+
+.nav-item small {
+  font-size: 0.625rem;
+  display: inline-block;
+  transform: translateY(8px);
+}
+
+.icon {
+  @include icon-style($element: nav-bar, $modifier: bespoke, $icon: laptop2, $font-size: 1.438rem, $color: color(bespoke-software-icon), $translate-y: 10px);
+  @include icon-style($element: nav-bar, $modifier: it-support, $icon: monitor, $font-size: 1.438rem, $color: color(it-support-icon), $translate-y: 10px);
+  @include icon-style($element: nav-bar, $modifier: digital-marketing, $icon: signal, $font-size: 1.438rem, $color: color(digital-marketing-icon), $translate-y: 10px);
+  @include icon-style($element: nav-bar, $modifier: telecoms-services, $icon: phone-ring, $font-size: 1.438rem, $color: color(telecoms-services-icon), $translate-y: 10px);
+  @include icon-style($element: nav-bar, $modifier: web-design, $icon: code, $font-size: 1.438rem, $color: color(web-design-icon), $translate-y: 10px);
+  @include icon-style($element: nav-bar, $modifier: cyber-security, $icon: shield, $font-size: 1.438rem, $color: color(cyber-security-icon), $translate-y: 10px);
+  @include icon-style($element: nav-bar, $modifier: developer-course, $icon: diploma-hat, $font-size: 1.438rem, $color: color(developer-course-icon), $translate-y: 10px);
+}
+
+//
+// Medium Media Query
+//
+
+@include mq("medium") {
+  // To override default display none value
+  #navbar {
+    display: block;
+  }
+
+  // To override default display none value
+  .nav-list {
+    display: flex;
+  }
+}
+
+//
+// Large Media Query
+//
+
+@include mq("large") {
+  // To increase width of nav items
+  .nav-item {
+    width: 167px;
+  }
+
+  // To increase triangle width
+  .nav-item--bespoke:hover::after,
+  .nav-item--it-support:hover::after,
+  .nav-item--digital-marketing:hover::after,
+  .nav-item--telecoms-services:hover::after,
+  .nav-item--web-design:hover::after,
+  .nav-item--cyber-security:hover::after,
+  .nav-item--developer-course:hover::after {
+    border-width: 35px 83.5px 0;
+  }
+}

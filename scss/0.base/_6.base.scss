@@ -15,3 +15,8 @@ body {
 .hidden {
   display: none;
 }
+
+// Removes blue focus outline of all elements (currently doing it for the xsmall search box)
+*:focus {
+  outline: none;
+}

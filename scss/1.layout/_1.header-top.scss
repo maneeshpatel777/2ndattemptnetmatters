@@ -1,0 +1,228 @@
+#header-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 110px;
+  padding: 20px 0;
+
+  @include mq("xsmall") {
+    justify-content: space-between;
+  }
+}
+
+//
+// XSmall Media Query Search Bar
+//
+
+.search-bar-xsmall {
+  //display: none;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 0 15px;
+  height: 47px;
+  padding: 5px 40px 5px 15px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  border-radius: 2px;
+
+  font-size: 14px;
+  transform: translateY(-11px);
+
+  // Move placeholder text slightly higher
+  & input {
+    transform: translateY(5px);
+
+    // Placeholder text colour
+    &::placeholder {
+      color: #888888;
+    }
+  }
+
+  .icon__header-top--xsmall-search {
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+  }
+
+  // Media query to hide it from small and above
+  @include mq("small") {
+    display: none;
+  }
+}
+
+//
+// Logo
+//
+
+#header-top img {
+  padding: 0 15px;
+  max-width: 100%;
+}
+
+//
+// Search bar
+//
+
+.search-form-flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+.search-bar {
+  //display: inline-block !important;
+  display: none;
+
+  border: #cccccc 1px solid;
+  font-size: 14px;
+  line-height: 1.42857143;
+  padding: 17px 15px;
+  //transform: translateY(-10px);
+  margin-left: 21px;
+
+  @include mq("small") {
+    display: inline-block !important;
+    width: 174px;
+  }
+
+  @include mq("medium") {
+    display: none !important;
+  }
+
+  @include mq("large") {
+    display: inline-block !important;
+    width: 240px;
+  }
+}
+
+//
+// Buttons
+//
+
+#header-top-buttons-flex {
+  display: flex;
+  padding: 0 15px;
+  align-items: center;
+}
+
+.icon__header-top--phone {
+  color: color(header-top-button-phone-ring-icon);
+
+  &:active {
+    text-decoration: underline !important;
+  }
+  @include mq("small") {
+    display: none;
+  }
+}
+
+.hamburger-icon {
+  background-color: white;
+  width: 33px;
+  height: 4px;
+  display: block;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: "";
+    background-color: white;
+    width: 33px;
+    height: 4px;
+    position: absolute;
+    left: 0;
+  }
+
+  &:before {
+    top: -10px;
+  }
+
+  &:after {
+    top: 10px;
+  }
+}
+
+.header-top-buttons {
+  display: inline-flex;
+  align-items: center;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 5px 15px;
+  margin-left: 20px;
+  color: white;
+  padding: 6px 16px;
+  height: 56px;
+  font-size: 1.125rem;
+}
+
+#header-support-button {
+  background-color: map-get($colors, "header-top-button-support-hover-off");
+  &:hover {
+    background-color: map-get($colors, "header-top-button-support-hover-on");
+  }
+  @include mq("xsmall") {
+    display: none;
+  }
+  @include mq("small") {
+    display: none;
+  }
+  @include mq("medium") {
+    display: inline-flex;
+  }
+}
+
+#header-contact-button {
+  background-color: map-get($colors, "header-top-button-contact-hover-off");
+  &:hover {
+    background-color: map-get($colors, "header-top-button-contact-hover-on");
+  }
+
+  @include mq("xsmall") {
+    display: none;
+  }
+  @include mq("small") {
+    display: none;
+  }
+  @include mq("medium") {
+    display: inline-flex;
+  }
+}
+
+#header-search-button {
+  background-color: map-get($colors, "header-top-button-search-hover-off");
+  margin-left: -5px;
+  border-radius: 0 3px 3px 0;
+  &:hover {
+    background-color: map-get($colors, "header-top-button-search-hover-on");
+  }
+  @include mq("xsmall") {
+    display: none;
+  }
+
+  @include mq("medium") {
+    margin-left: 20px;
+    border-radius: 3px;
+  }
+
+  @include mq("large") {
+    margin-left: -5px;
+    border-radius: 0 3px 3px 0;
+  }
+}
+
+#header-nav-button {
+  background-color: map-get($colors, "header-top-button-nav-hover-off");
+  &:hover {
+    background-color: map-get($colors, "header-top-button-nav-hover-on");
+  }
+}
+
+.icon {
+  @include icon-style($element: header-top, $modifier: phone, $icon: phone-ring, $font-size: 32px, $font-weight: 900, $margin: 0 5px 0 0, $display: null);
+  @include icon-style($element: header-top, $modifier: xsmall-search, $icon: magnify-glass, $font-size: 1.9rem, $font-weight: null);
+
+  // @include icon-style($element: header-top, $modifier: nav, $icon: three-lines, $font-size: 2.1rem, $font-weight: 900, $margin: 0 5px 0 0);
+  @include icon-style($element: header-top, $modifier: support, $icon: mouse, $font-size: 1.438rem, $margin: 0 5px 0 0);
+  @include icon-style($element: header-top, $modifier: contact, $icon: paper-plane, $font-size: 1.438rem, $margin: 0 5px 0 0);
+  @include icon-style($element: header-top, $modifier: search, $icon: magnify-glass, $font-size: 1.9rem, $font-weight: 900, $margin: 0 5px 0 0);
+}

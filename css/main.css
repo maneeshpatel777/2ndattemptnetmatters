@@ -366,6 +366,9 @@ body {
 .hidden {
   display: none; }
 
+*:focus {
+  outline: none; }
+
 .nav-item--bespoke:hover::after, .nav-item--it-support:hover::after, .nav-item--digital-marketing:hover::after, .nav-item--telecoms-services:hover::after, .nav-item--web-design:hover::after, .nav-item--cyber-security:hover::after, .nav-item--developer-course:hover::after {
   content: "";
   position: absolute;
@@ -376,7 +379,7 @@ body {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 35px 83.5px 0;
+  border-width: 35px 67px 0;
   clip-path: polygon(50% 100%, 0 0, 100% 0); }
 
 #header-top {
@@ -385,6 +388,31 @@ body {
   align-items: center;
   height: 110px;
   padding: 20px 0; }
+  @media (min-width: 1px) and (max-width: 767px) {
+    #header-top {
+      justify-content: space-between; } }
+
+.search-bar-xsmall {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 0 15px;
+  height: 47px;
+  padding: 5px 40px 5px 15px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  border-radius: 2px;
+  font-size: 14px;
+  transform: translateY(-11px); }
+  .search-bar-xsmall input {
+    transform: translateY(5px); }
+    .search-bar-xsmall input::placeholder {
+      color: #888888; }
+  .search-bar-xsmall .icon__header-top--xsmall-search {
+    position: absolute;
+    right: 5px;
+    bottom: 10px; }
+  @media (min-width: 768px) {
+    .search-bar-xsmall {
+      display: none; } }
 
 #header-top img {
   padding: 0 15px;
@@ -396,20 +424,53 @@ body {
 
 .search-bar {
   display: none;
-  width: 240px;
   border: #cccccc 1px solid;
   font-size: 14px;
   line-height: 1.42857143;
   padding: 17px 15px;
   margin-left: 21px; }
+  @media (min-width: 768px) {
+    .search-bar {
+      display: inline-block !important;
+      width: 174px; } }
+  @media (min-width: 992px) {
+    .search-bar {
+      display: none !important; } }
   @media (min-width: 1260px) {
     .search-bar {
-      display: inline-block !important; } }
+      display: inline-block !important;
+      width: 240px; } }
 
 #header-top-buttons-flex {
   display: flex;
   padding: 0 15px;
   align-items: center; }
+
+.icon__header-top--phone {
+  color: #12141a; }
+  .icon__header-top--phone:active {
+    text-decoration: underline !important; }
+  @media (min-width: 768px) {
+    .icon__header-top--phone {
+      display: none; } }
+
+.hamburger-icon {
+  background-color: white;
+  width: 33px;
+  height: 4px;
+  display: block;
+  position: relative; }
+  .hamburger-icon:before, .hamburger-icon:after {
+    content: "";
+    background-color: white;
+    width: 33px;
+    height: 4px;
+    position: absolute;
+    left: 0; }
+  .hamburger-icon:before {
+    top: -10px; }
+  .hamburger-icon:after {
+    top: 10px; }
 
 .header-top-buttons {
   display: inline-flex;
@@ -429,11 +490,29 @@ body {
   background-color: #4184d7; }
   #header-support-button:hover {
     background-color: #296ec6; }
+  @media (min-width: 1px) and (max-width: 767px) {
+    #header-support-button {
+      display: none; } }
+  @media (min-width: 768px) {
+    #header-support-button {
+      display: none; } }
+  @media (min-width: 992px) {
+    #header-support-button {
+      display: inline-flex; } }
 
 #header-contact-button {
   background-color: #999aa3; }
   #header-contact-button:hover {
     background-color: #84858f; }
+  @media (min-width: 1px) and (max-width: 767px) {
+    #header-contact-button {
+      display: none; } }
+  @media (min-width: 768px) {
+    #header-contact-button {
+      display: none; } }
+  @media (min-width: 992px) {
+    #header-contact-button {
+      display: inline-flex; } }
 
 #header-search-button {
   background-color: #999aa3;
@@ -441,12 +520,36 @@ body {
   border-radius: 0 3px 3px 0; }
   #header-search-button:hover {
     background-color: #7f808a; }
+  @media (min-width: 1px) and (max-width: 767px) {
+    #header-search-button {
+      display: none; } }
+  @media (min-width: 992px) {
+    #header-search-button {
+      margin-left: 20px;
+      border-radius: 3px; } }
+  @media (min-width: 1260px) {
+    #header-search-button {
+      margin-left: -5px;
+      border-radius: 0 3px 3px 0; } }
 
 #header-nav-button {
   background-color: #343645; }
   #header-nav-button:hover {
     background-color: #21242e; }
 
+.icon__header-top--phone {
+  font-family: "icomoon" !important;
+  margin: 0 5px 0 0;
+  font-size: 32px;
+  font-weight: 900; }
+  .icon__header-top--phone:before {
+    content: ""; }
+.icon__header-top--xsmall-search {
+  font-family: "icomoon" !important;
+  font-size: 1.9rem; }
+  .icon__header-top--xsmall-search:before {
+    content: "";
+    display: inline-block; }
 .icon__header-top--support {
   font-family: "icomoon" !important;
   margin: 0 5px 0 0;
@@ -469,24 +572,6 @@ body {
   .icon__header-top--search:before {
     content: "";
     display: inline-block; }
-
-.hamburger-icon {
-  background-color: white;
-  width: 33px;
-  height: 4px;
-  display: block;
-  position: relative; }
-  .hamburger-icon:before, .hamburger-icon:after {
-    content: "";
-    background-color: white;
-    width: 33px;
-    height: 4px;
-    position: absolute;
-    left: 0; }
-  .hamburger-icon:before {
-    top: -10px; }
-  .hamburger-icon:after {
-    top: 10px; }
 
 #navbar {
   display: none;
@@ -623,16 +708,7 @@ body {
     display: block; }
 
   .nav-list {
-    display: flex; }
-
-  .nav-item--bespoke:hover::after,
-  .nav-item--it-support:hover::after,
-  .nav-item--digital-marketing:hover::after,
-  .nav-item--telecoms-services:hover::after,
-  .nav-item--web-design:hover::after,
-  .nav-item--cyber-security:hover::after,
-  .nav-item--developer-course:hover::after {
-    border-width: 35px 67px 0; } }
+    display: flex; } }
 @media (min-width: 1260px) {
   .nav-item {
     width: 167px; }
@@ -807,14 +883,14 @@ body {
     display: inline-block; }
 .icon__it-support-submenu--cloud {
   font-family: "icomoon" !important;
-  padding: 0 10px 0 0;
+  margin: 0 10px 0 0;
   font-size: 1.2rem; }
   .icon__it-support-submenu--cloud:before {
     content: "";
     display: inline-block; }
 .icon__it-support-submenu--backup {
   font-family: "icomoon" !important;
-  padding: 0 10px 0 0;
+  margin: 0 10px 0 0;
   font-size: 1.2rem; }
   .icon__it-support-submenu--backup:before {
     content: "";

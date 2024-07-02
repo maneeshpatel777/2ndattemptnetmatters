@@ -3,7 +3,7 @@
 // Breakpoints
 
 $brkpoint-xsm: 1px;
-$brkpoint-sm: 768px;
+$brkpoint-sm: 767px;
 $brkpoint-md: 992px;
 $brkpoint-lg: 1260px;
 
@@ -13,6 +13,7 @@ $colors: (
   //
   // Header Top
   //
+  header-top-button-phone-ring-icon: #12141a,
   header-top-button-support-hover-off: #4184d7,
   header-top-button-support-hover-on: #296ec6,
   header-top-button-contact-hover-off: #999aa3,

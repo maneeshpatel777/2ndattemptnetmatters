@@ -28,10 +28,11 @@ $font-icons: (
   //
   // Header-top
   //
+  phone-ring: "\e900",
+  three-lines: "\e9BD",
   mouse: "\e906",
   paper-plane: "\e907",
   magnify-glass: "\e904",
-  three-lines: "\e9BD",
 
   //
   // Nav-bar
@@ -39,7 +40,8 @@ $font-icons: (
   laptop2: "\e957",
   monitor: "\e956",
   signal: "\e901",
-  phone-ring: "\e900",
+  // phone-ring: "\e900", (already used in Header-top)
+  //
   code: "\eA80",
   shield: "\e903",
   diploma-hat: "\e902",

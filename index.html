@@ -12,22 +12,7 @@
       rel="stylesheet"
     />
 
-    <style>
-      /* media queries test
-@media (max-width: 768px) {
-  .nav-list {
-    flex-direction: column;
-  }
-
-  .submenu {
-    position: static;
-  }
-
-  .submenu-grid {
-    grid-template-columns: 1fr;
-  }
-} */
-    </style>
+    <style></style>
   </head>
 
   <body>
@@ -35,20 +20,22 @@
       <div id="header">
         <header>
           <div id="header-top">
-            <img src="assets/images/f-logo.webp" alt="Netmatters Logo" />
+            <!-- Logo -->
+            <div>
+              <img src="assets/images/f-logo.webp" alt="Netmatters Logo" />
+            </div>
+            <!-- End of Logo -->
+
             <div id="header-top-buttons-flex">
+              <!-- Support button -->
               <button class="header-top-buttons" id="header-support-button"><span class="icon__header-top--support"></span>Support</button>
+              <!-- End of Support button -->
+
+              <!-- Contact button -->
               <button class="header-top-buttons" id="header-contact-button"><span class="icon__header-top--contact"></span>Contact</button>
+              <!-- End of Contact button -->
 
-              <!-- <div class="hidden-xs pull-left search-form-wrapper--tablet">
-                <form method="GET" action="https://www.netmatters.co.uk/search" accept-charset="UTF-8" class="search-form">
-                  <label for="search-input" class="hidden">Search:</label>
-                  <input class="form-control search-bar" placeholder="Search..." id="search-input" name="keyword" type="text" value="" /><button type="submit" id="search-submit">
-                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                  </button>
-                </form>
-              </div> -->
-
+              <!-- Search bar for larger displays -->
               <div>
                 <form class="search-form-flex" method="GET" action="https://www.netmatters.co.uk/search" accept-charset="UTF-8">
                   <label for="search-input" class="hidden">Search:</label>
@@ -58,13 +45,41 @@
                   </button>
                 </form>
               </div>
+              <!-- End of Search bar for larger displays -->
 
+              <!-- Phone icon for small displays -->
+              <a
+                class=""
+                href="tel:01603704020"
+                onclick="gtag('event', 'Phone', {'event_category': 'Phone','event_action': 'contactus','event_label': 'Completion'});"
+                title="Call 01603704020 with 3CX Click to Call"
+                tcxhref="tel:01603704020"
+                target=""
+              >
+                <span class="icon__header-top--phone"></span>
+              </a>
+              <!-- End of Phone icon for small displays -->
+
+              <!-- Hamburger Menu -->
               <button class="header-top-buttons" id="header-nav-button">
                 <!-- <span class="icon__header-top--nav"></span> -->
                 <span class="hamburger-icon"></span>
               </button>
+              <!-- End Hamburger Menu -->
             </div>
           </div>
+
+          <!-- XSmall search bar -->
+          <div>
+            <form method="GET" action="https://www.netmatters.co.uk/search" accept-charset="UTF-8" class="search-bar-xsmall">
+              <label for="search-input" class="hidden">Search:</label>
+              <input class="" placeholder="Search..." id="search-input" name="keyword" type="text" value="" />
+              <button type="submit" id="search-submit">
+                <span class="icon__header-top--xsmall-search" aria-hidden="true"></span>
+              </button>
+            </form>
+          </div>
+          <!-- End of XSmall search bar -->
 
           <nav id="navbar">
             <ul class="nav-list">

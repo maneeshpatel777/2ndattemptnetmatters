@@ -76,8 +76,8 @@
 
 // hover over nav item
 
-@mixin nav-item-hover($nav-element, $bg-color, $translate-x: null) {
-  &--#{$nav-element} {
+@mixin nav-item-hover($element, $bg-color, $translate-x: null) {
+  &--#{$element} {
     &:hover {
       background-color: $bg-color;
 
@@ -92,9 +92,40 @@
   }
 }
 
+//
 // icon mixin
+//
 
-@mixin icon-style($element, $modifier, $icon, $font-size: null, $font-weight: null, $margin: null, $padding: null, $color: null, $transform-x: null, $transform-y: null) {
+// @mixin icon-style($element, $modifier, $icon, $font-size: null, $font-weight: null, $margin: null, $padding: null, $color: null, $transform-x: null, $transform-y: null) {
+//   @include e(#{$element}) {
+//     @include m(#{$modifier}) {
+//       font-family: "icomoon" !important;
+//       margin: $margin;
+//       padding: $padding;
+//       font-size: $font-size;
+//       font-weight: $font-weight;
+
+//       &:before {
+//         content: icon($icon);
+//         color: $color;
+//         display: inline-block;
+
+//         @if $transform-x and $transform-y {
+//           transform: translate(#{$transform-x}, #{$transform-y});
+//         } @else {
+//           @if $transform-x {
+//             transform: translateX(#{$transform-x});
+//           }
+//           @if $transform-y {
+//             transform: translateY(#{$transform-y});
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+@mixin icon-style($element, $modifier, $icon, $font-size: null, $font-weight: null, $margin: null, $padding: null, $color: null, $translate-x: null, $translate-y: null, $display: inline-block) {
   @include e(#{$element}) {
     @include m(#{$modifier}) {
       font-family: "icomoon" !important;
@@ -106,16 +137,16 @@
       &:before {
         content: icon($icon);
         color: $color;
-        display: inline-block;
+        display: $display;
 
-        @if $transform-x and $transform-y {
-          transform: translate(#{$transform-x}, #{$transform-y});
+        @if $translate-x and $translate-y {
+          transform: translate(#{$translate-x}, #{$translate-y});
         } @else {
-          @if $transform-x {
-            transform: translateX(#{$transform-x});
+          @if $translate-x {
+            transform: translateX(#{$translate-x});
           }
-          @if $transform-y {
-            transform: translateY(#{$transform-y});
+          @if $translate-y {
+            transform: translateY(#{$translate-y});
           }
         }
       }
