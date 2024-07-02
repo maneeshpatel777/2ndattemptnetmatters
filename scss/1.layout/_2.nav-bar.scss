@@ -2,6 +2,7 @@
   display: none;
   position: relative;
   background-color: color(nav-bar-background);
+  height: 99px;
 }
 
 .nav-list {
@@ -16,7 +17,6 @@
   position: static;
   color: white;
   text-align: center;
-  padding: 19px 0 18px 0;
   width: 134px;
   cursor: pointer;
   text-transform: uppercase;
@@ -24,6 +24,17 @@
 
   a {
     color: white;
+
+    // Increases the padding area for anchor tag
+    &:not(.submenu a) {
+      //  Not used to prevent the submenu anchor tags from being affected, only nav items
+      position: relative;
+      display: block;
+      text-align: center;
+      padding: 9px 0 50px;
+      z-index: 1000; // To be clickable above triangle z-index
+      font-size: 18px;
+    }
   }
 
   // Changes icons to white on hover

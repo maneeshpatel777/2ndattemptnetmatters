@@ -576,7 +576,8 @@ body {
 #navbar {
   display: none;
   position: relative;
-  background-color: #343645; }
+  background-color: #343645;
+  height: 99px; }
 
 .nav-list {
   display: none;
@@ -589,13 +590,19 @@ body {
   position: static;
   color: white;
   text-align: center;
-  padding: 19px 0 18px 0;
   width: 134px;
   cursor: pointer;
   text-transform: uppercase;
   font-size: 18px; }
   .nav-item a {
     color: white; }
+    .nav-item a:not(.submenu a) {
+      position: relative;
+      display: block;
+      text-align: center;
+      padding: 9px 0 50px;
+      z-index: 1000;
+      font-size: 18px; }
   .nav-item:hover [class^="icon__nav-bar"]:before {
     color: white; }
   .nav-item--bespoke:hover {
