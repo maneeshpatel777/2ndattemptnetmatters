@@ -1,3 +1,75 @@
+.flex {
+  @include e(services) {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    & a {
+      width: 100%;
+    }
+  }
+}
+
+.grid {
+  // gap: 15px;
+
+  @include e(services) {
+    @include m(bespoke-software) {
+    }
+
+    @include m(it-support) {
+    }
+
+    @include m(digital-marketing) {
+    }
+
+    @include m(telecoms-services) {
+    }
+
+    @include m(web-design) {
+    }
+
+    @include m(cyber-security) {
+    }
+
+    @include m(developer-training) {
+    }
+  }
+
+  @include mq("small") {
+    grid-template-columns: repeat(12, 1fr);
+
+    .grid__services--bespoke-software,
+    .grid__services--it-support,
+    .grid__services--digital-marketing {
+      grid-column: span 12;
+    }
+
+    .grid__services--telecoms-services,
+    .grid__services--web-design,
+    .grid__services--cyber-security,
+    .grid__services--developer-training {
+      grid-column: span 6;
+    }
+  }
+
+  @include mq("medium") {
+    .grid__services--bespoke-software,
+    .grid__services--it-support,
+    .grid__services--digital-marketing {
+      grid-column: span 4;
+    }
+  }
+
+  @include mq("large") {
+    .grid__services--telecoms-services,
+    .grid__services--web-design,
+    .grid__services--cyber-security,
+    .grid__services--developer-training {
+      grid-column: span 3;
+    }
+  }
+}
+
 #services-container {
   // container section
   padding-top: 50px;
@@ -6,7 +78,6 @@
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-  background-color: blue;
 }
 
 #services-section {
@@ -43,7 +114,7 @@
   position: relative;
   top: 0;
   transition: 0.5s ease;
-  border: 1px solid #000;
+  border: 1px solid #ccc;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
   padding: 30px;
   color: #343645;

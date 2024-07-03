@@ -374,11 +374,9 @@ div {
 
 .flex {
   display: flex; }
-  .flex__services {
-    padding-left: 15px;
-    padding-right: 15px; }
-    .flex__services a {
-      width: 100%; }
+
+.grid {
+  display: grid; }
 
 .nav-item--bespoke:hover::after, .nav-item--it-support:hover::after, .nav-item--digital-marketing:hover::after, .nav-item--telecoms-services:hover::after, .nav-item--web-design:hover::after, .nav-item--cyber-security:hover::after, .nav-item--developer-course:hover::after {
   content: "";
@@ -1132,7 +1130,37 @@ div {
   grid-template-areas: "heading heading heading" "train-for-career skills-bootcamp scion-faq" "scion-collaborators scion-collaborators scion-collaborators"; }
 
 #banner img {
-  width: 10%; }
+  width: 100%; }
+
+.flex__services {
+  padding-left: 15px;
+  padding-right: 15px; }
+  .flex__services a {
+    width: 100%; }
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(12, 1fr); }
+    .grid .grid__services--bespoke-software,
+    .grid .grid__services--it-support,
+    .grid .grid__services--digital-marketing {
+      grid-column: span 12; }
+    .grid .grid__services--telecoms-services,
+    .grid .grid__services--web-design,
+    .grid .grid__services--cyber-security,
+    .grid .grid__services--developer-training {
+      grid-column: span 6; } }
+@media (min-width: 992px) {
+  .grid .grid__services--bespoke-software,
+  .grid .grid__services--it-support,
+  .grid .grid__services--digital-marketing {
+    grid-column: span 4; } }
+@media (min-width: 1260px) {
+  .grid .grid__services--telecoms-services,
+  .grid .grid__services--web-design,
+  .grid .grid__services--cyber-security,
+  .grid .grid__services--developer-training {
+    grid-column: span 3; } }
 
 #services-container {
   padding-top: 50px;
@@ -1140,8 +1168,7 @@ div {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
-  padding-right: 15px;
-  background-color: blue; }
+  padding-right: 15px; }
 
 #services-section {
   margin-top: 20px;
@@ -1159,7 +1186,7 @@ div {
   position: relative;
   top: 0;
   transition: 0.5s ease;
-  border: 1px solid #000;
+  border: 1px solid #ccc;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
   padding: 30px;
   color: #343645; }

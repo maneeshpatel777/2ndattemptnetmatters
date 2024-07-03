@@ -27,12 +27,25 @@ div {
 
 .flex {
   display: flex;
-  @include e(services) {
-    padding-left: 15px;
-    padding-right: 15px;
-
-    & a {
-      width: 100%;
-    }
-  }
 }
+
+.grid {
+  display: grid;
+}
+
+// #container {
+//   margin-right: auto;
+//   margin-left: auto;
+//   padding-left: 15px;
+//   padding-right: 15px;
+
+//   @include mq("small") {
+//     width: 750px;
+//   }
+//   @include mq("medium") {
+//     width: 970px;
+//   }
+//   @include mq("large") {
+//     width: 1200px;
+//   }
+// }
