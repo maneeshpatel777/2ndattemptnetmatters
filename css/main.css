@@ -1242,52 +1242,132 @@ div {
   .services-panel__digital-marketing:hover .icon__services--digital-marketing:before {
     color: #2fcc71; }
 
+.services-avatar__telecoms-services {
+  background-color: #d64542; }
+
 .services-button__telecoms-services {
-  color: white; }
+  color: white;
+  background-color: #d64542; }
 
 .services-panel__telecoms-services:hover {
+  background-color: #d64542;
   color: white; }
   .services-panel__telecoms-services:hover .services-button__telecoms-services {
+    color: #d64542;
     background-color: white; }
   .services-panel__telecoms-services:hover .services-avatar__telecoms-services {
     background-color: white; }
+  .services-panel__telecoms-services:hover .icon__services--telecoms-services:before {
+    color: #d64542; }
+
+.services-avatar__web-design {
+  background-color: #9270b1; }
 
 .services-button__web-design {
-  color: white; }
+  color: white;
+  background-color: #9270b1; }
 
 .services-panel__web-design:hover {
+  background-color: #9270b1;
   color: white; }
   .services-panel__web-design:hover .services-button__web-design {
+    color: #9270b1;
     background-color: white; }
   .services-panel__web-design:hover .services-avatar__web-design {
     background-color: white; }
+  .services-panel__web-design:hover .icon__services--web-design:before {
+    color: #9270b1; }
+
+.services-avatar__cyber-security {
+  background-color: #f6255a; }
 
 .services-button__cyber-security {
-  color: white; }
+  color: white;
+  background-color: #f6255a; }
 
 .services-panel__cyber-security:hover {
+  background-color: #f6255a;
   color: white; }
   .services-panel__cyber-security:hover .services-button__cyber-security {
+    color: #f6255a;
     background-color: white; }
   .services-panel__cyber-security:hover .services-avatar__cyber-security {
     background-color: white; }
+  .services-panel__cyber-security:hover .icon__services--cyber-security:before {
+    color: #f6255a; }
+
+.services-avatar__developer-training {
+  background-color: #cf4126; }
 
 .services-button__developer-training {
-  color: white; }
+  color: white;
+  background-color: #cf4126; }
 
 .services-panel__developer-training:hover {
+  background-color: #cf4126;
   color: white; }
   .services-panel__developer-training:hover .services-button__developer-training {
+    color: #cf4126;
     background-color: white; }
   .services-panel__developer-training:hover .services-avatar__developer-training {
     background-color: white; }
+  .services-panel__developer-training:hover .icon__services--developer-training:before {
+    color: #cf4126; }
 
 .icon__services--bespoke-software {
   font-family: "icomoon" !important;
   font-size: 2rem;
   line-height: 64px; }
   .icon__services--bespoke-software:before {
+    content: "";
+    color: white;
+    display: block; }
+.icon__services--it-support {
+  font-family: "icomoon" !important;
+  font-size: 2rem;
+  line-height: 64px; }
+  .icon__services--it-support:before {
     content: "";
+    color: white;
+    display: block; }
+.icon__services--digital-marketing {
+  font-family: "icomoon" !important;
+  font-size: 2rem;
+  line-height: 64px; }
+  .icon__services--digital-marketing:before {
+    content: "";
+    color: white;
+    display: block; }
+.icon__services--telecoms-services {
+  font-family: "icomoon" !important;
+  font-size: 2rem;
+  line-height: 64px; }
+  .icon__services--telecoms-services:before {
+    content: "";
+    color: white;
+    display: block; }
+.icon__services--web-design {
+  font-family: "icomoon" !important;
+  font-size: 2rem;
+  line-height: 64px; }
+  .icon__services--web-design:before {
+    content: "";
+    color: white;
+    display: block; }
+.icon__services--cyber-security {
+  font-family: "icomoon" !important;
+  font-size: 2rem;
+  line-height: 64px; }
+  .icon__services--cyber-security:before {
+    content: "";
+    color: white;
+    display: block; }
+.icon__services--developer-training {
+  font-family: "icomoon" !important;
+  font-size: 2rem;
+  line-height: 64px; }
+  .icon__services--developer-training:before {
+    content: "";
     color: white;
     display: block; }
 

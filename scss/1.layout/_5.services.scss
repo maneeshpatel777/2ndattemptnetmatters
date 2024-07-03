@@ -92,7 +92,13 @@
 @include services-panel-colors($element: developer-training, $avatar-and-hover-colors: color(developer-training-avatar-hoverIcon-hoverButtonText));
 
 .icon {
-  @include icon-style($element: services, $modifier: bespoke-software, $icon: monitor, $font-size: 2rem, $line-height: 64px, $display: block, $color: white);
+  @include icon-style($element: services, $modifier: bespoke-software, $icon: laptop2, $font-size: 2rem, $line-height: 64px, $display: block, $color: white);
+  @include icon-style($element: services, $modifier: it-support, $icon: monitor, $font-size: 2rem, $line-height: 64px, $display: block, $color: white);
+  @include icon-style($element: services, $modifier: digital-marketing, $icon: signal, $font-size: 2rem, $line-height: 64px, $display: block, $color: white);
+  @include icon-style($element: services, $modifier: telecoms-services, $icon: phone, $font-size: 2rem, $line-height: 64px, $display: block, $color: white);
+  @include icon-style($element: services, $modifier: web-design, $icon: code, $font-size: 2rem, $line-height: 64px, $display: block, $color: white);
+  @include icon-style($element: services, $modifier: cyber-security, $icon: shield, $font-size: 2rem, $line-height: 64px, $display: block, $color: white);
+  @include icon-style($element: services, $modifier: developer-training, $icon: diploma-hat, $font-size: 2rem, $line-height: 64px, $display: block, $color: white);
 }
 
 .services-avatar {
