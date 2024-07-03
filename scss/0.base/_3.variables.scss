@@ -44,7 +44,7 @@ $colors: (
   cyber-security-hover: #f62459,
   developer-course-hover: #ce4126,
   //
-  // Submenu Colours
+  // Submenu
   //
   bespoke-software-submenu: #516781,
   it-support-submenu: #286abd,
@@ -52,5 +52,25 @@ $colors: (
   telecoms-services-submenu: #bc2c28,
   web-design-submenu: #79539a,
   cyber-security-submenu: #de0a3f,
-  developer-course-submenu: #a3321e
+  developer-course-submenu: #a3321e,
+  //
+  // Services Avatar Background, &:hover Icon & Button Text
+  //
+  bespoke-software-avatar-hoverIcon-hoverButtonText: #67809f,
+  it-support-avatar-hoverIcon-hoverButtonText: #4184d7,
+  digital-marketing-avatar-hoverIcon-hoverButtonText: #2fcc71,
+  telecoms-services-avatar-Icon-hoverButtonText: #d64542,
+  web-design-avatar-Icon-hoverButtonText: #9270b1,
+  cyber-security-avatar-Icon-hoverButtonText: #f6255a,
+  developer-training-avatar-Icon-hoverButtonText: #cf4126,
+  //
+  // Services Button
+  //
+  bespoke-software-services-button: #f7b322,
+  it-support-services-button: #4184d7,
+  digital-marketing-services-button: #2fcc71,
+  telecoms-services-services-button: #d64542,
+  web-design-services-button: #9270b1,
+  cyber-security-services-button: #f6255a,
+  developer-training-services-button: #cf4126
 );

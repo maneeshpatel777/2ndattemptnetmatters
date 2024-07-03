@@ -1,0 +1,104 @@
+#services-container {
+  // container section
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: blue;
+}
+
+#services-section {
+  // services list
+  margin-top: 20px;
+  background-color: #ffffff;
+  // margin-left: -15px;
+  // margin-right: -15px;
+
+  & span {
+    //background-color: red;
+  }
+}
+
+#services-row {
+  // row
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+// .avatar-test {
+//   background-color: red;
+//   width: 500px;
+//   height: 500px;
+//   margin: 0 auto 17px;
+// }
+
+.services-panel {
+  // block
+  margin-top: 30px;
+  text-align: center;
+  border-radius: 15px;
+  position: relative;
+  top: 0;
+  transition: 0.5s ease;
+  border: 1px solid #000;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  color: #343645;
+
+  & span {
+    display: block;
+    text-align: center;
+
+    &.heading {
+      font-size: 1.3rem;
+      padding-bottom: 10px;
+      margin: 0 0 11px;
+    }
+    &.paragraph {
+      font-size: 0.8125rem;
+      line-height: 1.375rem;
+      margin-bottom: 13px;
+      font-weight: 400;
+    }
+
+    &.services-button {
+      display: inline-block;
+      line-height: 35px;
+      padding: 5px 15px;
+      text-transform: uppercase;
+      font-size: 1.063rem;
+      border-radius: 3px;
+      font-weight: 400;
+      border: 1px solid transparent;
+      // color: white;
+    }
+  }
+
+  &:hover {
+    border-color: transparent;
+    top: -10px;
+  }
+}
+
+@include services-panel-colors($element: bespoke-software, $avatar-and-hover-colors: color(bespoke-software-avatar-hoverIcon-hoverButtonText), $button-colors: color(bespoke-software-services-button));
+@include services-panel-colors($element: it-support, $avatar-and-hover-colors: color(it-support-avatar-hoverIcon-hoverButtonText));
+@include services-panel-colors($element: digital-marketing, $avatar-and-hover-colors: color(digital-marketing-avatar-hoverIcon-hoverButtonText));
+@include services-panel-colors($element: telecoms-services, $avatar-and-hover-colors: color(telecoms-services-avatar-hoverIcon-hoverButtonText));
+@include services-panel-colors($element: web-design, $avatar-and-hover-colors: color(web-design-avatar-hoverIcon-hoverButtonText));
+@include services-panel-colors($element: cyber-security, $avatar-and-hover-colors: color(cyber-security-avatar-hoverIcon-hoverButtonText));
+@include services-panel-colors($element: developer-training, $avatar-and-hover-colors: color(developer-training-avatar-hoverIcon-hoverButtonText));
+
+.icon {
+  @include icon-style($element: services, $modifier: bespoke-software, $icon: monitor, $font-size: 2rem, $line-height: 64px, $display: block, $color: white);
+}
+
+.services-avatar {
+  //icon
+  height: 65px;
+  width: 65px;
+  margin: 0 auto 17px;
+  border-radius: 50%;
+}

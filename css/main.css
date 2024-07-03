@@ -369,6 +369,17 @@ body {
 *:focus {
   outline: none; }
 
+div {
+  display: block; }
+
+.flex {
+  display: flex; }
+  .flex__services {
+    padding-left: 15px;
+    padding-right: 15px; }
+    .flex__services a {
+      width: 100%; }
+
 .nav-item--bespoke:hover::after, .nav-item--it-support:hover::after, .nav-item--digital-marketing:hover::after, .nav-item--telecoms-services:hover::after, .nav-item--web-design:hover::after, .nav-item--cyber-security:hover::after, .nav-item--developer-course:hover::after {
   content: "";
   position: absolute;
@@ -1119,5 +1130,171 @@ body {
 
 #developer-course-grid {
   grid-template-areas: "heading heading heading" "train-for-career skills-bootcamp scion-faq" "scion-collaborators scion-collaborators scion-collaborators"; }
+
+#banner img {
+  width: 10%; }
+
+#services-container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: blue; }
+
+#services-section {
+  margin-top: 20px;
+  background-color: #ffffff; }
+
+#services-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.services-panel {
+  margin-top: 30px;
+  text-align: center;
+  border-radius: 15px;
+  position: relative;
+  top: 0;
+  transition: 0.5s ease;
+  border: 1px solid #000;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  color: #343645; }
+  .services-panel span {
+    display: block;
+    text-align: center; }
+    .services-panel span.heading {
+      font-size: 1.3rem;
+      padding-bottom: 10px;
+      margin: 0 0 11px; }
+    .services-panel span.paragraph {
+      font-size: 0.8125rem;
+      line-height: 1.375rem;
+      margin-bottom: 13px;
+      font-weight: 400; }
+    .services-panel span.services-button {
+      display: inline-block;
+      line-height: 35px;
+      padding: 5px 15px;
+      text-transform: uppercase;
+      font-size: 1.063rem;
+      border-radius: 3px;
+      font-weight: 400;
+      border: 1px solid transparent; }
+  .services-panel:hover {
+    border-color: transparent;
+    top: -10px; }
+
+.services-avatar__bespoke-software {
+  background-color: #67809f; }
+
+.services-button__bespoke-software {
+  color: white;
+  background-color: #f7b322; }
+
+.services-panel__bespoke-software:hover {
+  background-color: #67809f;
+  color: white; }
+  .services-panel__bespoke-software:hover .services-button__bespoke-software {
+    color: #67809f;
+    background-color: white; }
+  .services-panel__bespoke-software:hover .services-avatar__bespoke-software {
+    background-color: white; }
+  .services-panel__bespoke-software:hover .icon__services--bespoke-software:before {
+    color: #67809f; }
+
+.services-avatar__it-support {
+  background-color: #4184d7; }
+
+.services-button__it-support {
+  color: white;
+  background-color: #4184d7; }
+
+.services-panel__it-support:hover {
+  background-color: #4184d7;
+  color: white; }
+  .services-panel__it-support:hover .services-button__it-support {
+    color: #4184d7;
+    background-color: white; }
+  .services-panel__it-support:hover .services-avatar__it-support {
+    background-color: white; }
+  .services-panel__it-support:hover .icon__services--it-support:before {
+    color: #4184d7; }
+
+.services-avatar__digital-marketing {
+  background-color: #2fcc71; }
+
+.services-button__digital-marketing {
+  color: white;
+  background-color: #2fcc71; }
+
+.services-panel__digital-marketing:hover {
+  background-color: #2fcc71;
+  color: white; }
+  .services-panel__digital-marketing:hover .services-button__digital-marketing {
+    color: #2fcc71;
+    background-color: white; }
+  .services-panel__digital-marketing:hover .services-avatar__digital-marketing {
+    background-color: white; }
+  .services-panel__digital-marketing:hover .icon__services--digital-marketing:before {
+    color: #2fcc71; }
+
+.services-button__telecoms-services {
+  color: white; }
+
+.services-panel__telecoms-services:hover {
+  color: white; }
+  .services-panel__telecoms-services:hover .services-button__telecoms-services {
+    background-color: white; }
+  .services-panel__telecoms-services:hover .services-avatar__telecoms-services {
+    background-color: white; }
+
+.services-button__web-design {
+  color: white; }
+
+.services-panel__web-design:hover {
+  color: white; }
+  .services-panel__web-design:hover .services-button__web-design {
+    background-color: white; }
+  .services-panel__web-design:hover .services-avatar__web-design {
+    background-color: white; }
+
+.services-button__cyber-security {
+  color: white; }
+
+.services-panel__cyber-security:hover {
+  color: white; }
+  .services-panel__cyber-security:hover .services-button__cyber-security {
+    background-color: white; }
+  .services-panel__cyber-security:hover .services-avatar__cyber-security {
+    background-color: white; }
+
+.services-button__developer-training {
+  color: white; }
+
+.services-panel__developer-training:hover {
+  color: white; }
+  .services-panel__developer-training:hover .services-button__developer-training {
+    background-color: white; }
+  .services-panel__developer-training:hover .services-avatar__developer-training {
+    background-color: white; }
+
+.icon__services--bespoke-software {
+  font-family: "icomoon" !important;
+  font-size: 2rem;
+  line-height: 64px; }
+  .icon__services--bespoke-software:before {
+    content: "";
+    color: white;
+    display: block; }
+
+.services-avatar {
+  height: 65px;
+  width: 65px;
+  margin: 0 auto 17px;
+  border-radius: 50%; }
 
 /*# sourceMappingURL=main.css.map */
