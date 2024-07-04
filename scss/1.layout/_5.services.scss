@@ -1,3 +1,39 @@
+#services-heading {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+
+  span:first-child {
+    font-size: 2.7rem;
+    font-weight: 400;
+    color: #333645;
+  }
+
+  span:last-child {
+    @include mq("xsmall") {
+      display: none;
+    }
+
+    font-size: 2.25rem;
+    display: inline-flex;
+    color: #333645;
+    //align-items: baseline;
+
+    a {
+      // View Our Work URL
+      font-size: 2.25rem;
+      font-weight: 600;
+    }
+    &:hover {
+      text-decoration: underline;
+      .icon__services--view-our-work {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
 .flex {
   @include e(services) {
     padding-left: 15px;
@@ -163,6 +199,7 @@
 @include services-panel-colors($element: developer-training, $avatar-and-hover-colors: color(developer-training-avatar-hoverIcon-hoverButtonText));
 
 .icon {
+  @include icon-style($element: services, $modifier: view-our-work, $icon: arrow-right, $font-size: 2.25rem, $font-weight: normal !important, $line-height: 64px, $display: block, $color: black);
   @include icon-style($element: services, $modifier: bespoke-software, $icon: laptop2, $font-size: 2rem, $line-height: 64px, $display: block, $color: white);
   @include icon-style($element: services, $modifier: it-support, $icon: monitor, $font-size: 2rem, $line-height: 64px, $display: block, $color: white);
   @include icon-style($element: services, $modifier: digital-marketing, $icon: signal, $font-size: 2rem, $line-height: 64px, $display: block, $color: white);

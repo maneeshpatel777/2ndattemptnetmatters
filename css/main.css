@@ -363,6 +363,9 @@ body {
   font-size: 1rem;
   letter-spacing: 0.4px; }
 
+a:visited {
+  color: inherit; }
+
 .hidden {
   display: none; }
 
@@ -377,6 +380,21 @@ div {
 
 .grid {
   display: grid; }
+
+#container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 768px) {
+    #container {
+      width: 750px; } }
+  @media (min-width: 992px) {
+    #container {
+      width: 970px; } }
+  @media (min-width: 1260px) {
+    #container {
+      width: 1200px; } }
 
 .nav-item--bespoke:hover::after, .nav-item--it-support:hover::after, .nav-item--digital-marketing:hover::after, .nav-item--telecoms-services:hover::after, .nav-item--web-design:hover::after, .nav-item--cyber-security:hover::after, .nav-item--developer-course:hover::after {
   content: "";
@@ -586,7 +604,9 @@ div {
   display: none;
   position: relative;
   background-color: #343645;
-  height: 99px; }
+  height: 99px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw); }
 
 .nav-list {
   display: none;
@@ -1130,7 +1150,32 @@ div {
   grid-template-areas: "heading heading heading" "train-for-career skills-bootcamp scion-faq" "scion-collaborators scion-collaborators scion-collaborators"; }
 
 #banner img {
-  width: 100%; }
+  width: 100vw;
+  margin-left: calc(50% - 50vw); }
+
+#services-heading {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px; }
+  #services-heading span:first-child {
+    font-size: 2.7rem;
+    font-weight: 400;
+    color: #333645; }
+  #services-heading span:last-child {
+    font-size: 2.25rem;
+    display: inline-flex;
+    color: #333645; }
+    @media (min-width: 1px) and (max-width: 767px) {
+      #services-heading span:last-child {
+        display: none; } }
+    #services-heading span:last-child a {
+      font-size: 2.25rem;
+      font-weight: 600; }
+    #services-heading span:last-child:hover {
+      text-decoration: underline; }
+      #services-heading span:last-child:hover .icon__services--view-our-work {
+        text-decoration: underline; }
 
 .flex__services {
   padding-left: 15px;
@@ -1341,6 +1386,15 @@ div {
   .services-panel__developer-training:hover .icon__services--developer-training:before {
     color: #cf4126; }
 
+.icon__services--view-our-work {
+  font-family: "icomoon" !important;
+  font-size: 2.25rem;
+  font-weight: normal !important;
+  line-height: 64px; }
+  .icon__services--view-our-work:before {
+    content: "";
+    color: black;
+    display: block; }
 .icon__services--bespoke-software {
   font-family: "icomoon" !important;
   font-size: 2rem;

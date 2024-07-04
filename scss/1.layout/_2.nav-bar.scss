@@ -3,6 +3,8 @@
   position: relative;
   background-color: color(nav-bar-background);
   height: 99px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
 }
 
 .nav-list {

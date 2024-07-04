@@ -12,6 +12,11 @@ body {
   letter-spacing: 0.4px;
 }
 
+// Changes hyperlink colour to the inherited colour of the text
+a:visited {
+  color: inherit;
+}
+
 .hidden {
   display: none;
 }
@@ -33,19 +38,20 @@ div {
   display: grid;
 }
 
-// #container {
-//   margin-right: auto;
-//   margin-left: auto;
-//   padding-left: 15px;
-//   padding-right: 15px;
+// Added this later, thought it was going to be a disaster, but it didn't screw up my navbar thankfully, and once I learned how to stretch things past the margin, site looks better
+#container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 
-//   @include mq("small") {
-//     width: 750px;
-//   }
-//   @include mq("medium") {
-//     width: 970px;
-//   }
-//   @include mq("large") {
-//     width: 1200px;
-//   }
-// }
+  @include mq("small") {
+    width: 750px;
+  }
+  @include mq("medium") {
+    width: 970px;
+  }
+  @include mq("large") {
+    width: 1200px;
+  }
+}
