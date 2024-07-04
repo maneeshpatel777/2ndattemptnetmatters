@@ -44,7 +44,7 @@ div {
 }
 
 // Added this later, thought it was going to be a disaster, but it didn't screw up my navbar thankfully, and once I learned how to stretch things past the margin, site looks better
-#container {
+.container {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -57,6 +57,6 @@ div {
     width: 970px;
   }
   @include mq("large") {
-    width: 1200px;
+    width: 1255px;
   }
 }

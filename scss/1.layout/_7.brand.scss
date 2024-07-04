@@ -8,10 +8,11 @@
     text-transform: uppercase;
     display: inline-flex;
     align-items: center;
-    padding: 10px 30px;
+    padding: 10px 26px;
     border-radius: 6px;
-    margin-right: 10px;
+    margin-right: 9px;
     font-size: 20px;
+    margin-bottom: 20px;
     @include m(welcome-to-netmatters) {
       background-color: #272936;
       &:hover {
@@ -19,12 +20,18 @@
       }
     }
     @include m(google-reviews) {
+      @include mq("medium") {
+        padding: 6px 26px;
+      }
       background-color: #4288f7;
       &:hover {
         background-color: #146af4;
       }
     }
     @include m(trustpilot-reviews) {
+      @include mq("medium") {
+        padding: 6px 26px;
+      }
       background-color: #06b67c;
       &:hover {
         background-color: #009b69;
@@ -33,20 +40,28 @@
   }
 }
 
-#what-our-clients-think {
-  margin-top: 22px;
-  margin-bottom: 51px;
+#brand-star-icon-div {
+  //margin-top: 22px;
+  //margin-bottom: 51px;
+  @include mq("medium") {
+    //margin-top: 22px;
+    margin-bottom: 10px;
+  }
+}
+
+#brand-background {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background-color: #333645;
 }
 
 .brand-section {
-  background-color: #333645;
   padding: 50px 15px;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+
   color: white;
 
   h2 {
-    margin-bottom: 40px;
+    margin-bottom: 52px;
     strong {
       font-size: 2.25rem;
       font-weight: 600;
@@ -56,6 +71,9 @@
   p {
     line-height: 1.875rem;
     margin-bottom: 25px;
+    &:first-of-type {
+      margin-top: -23px;
+    }
     strong {
       font-weight: 600;
     }
@@ -69,9 +87,44 @@
 }
 
 .brand-section__content {
-  div {
+  display: flex;
+  flex-direction: column;
+
+  div:last-child {
+    display: inline-block;
+    h2 {
+      margin-top: 50px;
+    }
+  }
+
+  @include mq("medium") {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    div {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+
+      &:not(.brand-buttons):not(#brand-star-icon-div) {
+        // No extra padding on the buttons and the star icons
+        padding: 0 15px;
+      }
+    }
+
+    div:last-child {
+      display: flex;
+
+      h2 {
+        margin-top: 0;
+      }
+    }
+
+    div:first-child {
+      flex: 1;
+    }
+    div:last-child {
+      flex: 1;
+    }
   }
 
   div:first-child {
@@ -83,6 +136,7 @@
         font-weight: 600;
         font-size: 1.3rem;
         font-style: italic;
+        margin-top: 26px;
       }
       // Targets clients author
       &:last-of-type {
