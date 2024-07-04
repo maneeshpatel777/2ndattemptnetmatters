@@ -1177,6 +1177,27 @@ div {
       #services-heading span:last-child:hover .icon__services--view-our-work {
         text-decoration: underline; }
 
+#xsmall-view-our-work {
+  color: #333645;
+  justify-content: center;
+  margin-top: 12px; }
+  #xsmall-view-our-work .icon__services--xsmall-view-our-work {
+    font-size: 1.625rem;
+    justify-content: center; }
+  #xsmall-view-our-work span {
+    display: inline-flex;
+    color: #333645; }
+    #xsmall-view-our-work span a {
+      font-size: 1.625rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: baseline; }
+      #xsmall-view-our-work span a:hover {
+        text-decoration: underline; }
+  @media (min-width: 768px) {
+    #xsmall-view-our-work {
+      display: none; } }
+
 .flex__services {
   padding-left: 15px;
   padding-right: 15px; }
@@ -1209,11 +1230,14 @@ div {
 
 #services-container {
   padding-top: 22px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px; }
+  @media (min-width: 768px) {
+    #services-container {
+      padding-bottom: 100px; } }
 
 #services-section {
   margin-top: 20px;
@@ -1386,6 +1410,15 @@ div {
   .services-panel__developer-training:hover .icon__services--developer-training:before {
     color: #cf4126; }
 
+.icon__services--xsmall-view-our-work {
+  font-family: "icomoon" !important;
+  font-size: 1.625rem;
+  font-weight: 400 !important;
+  line-height: 64px; }
+  .icon__services--xsmall-view-our-work:before {
+    content: "";
+    color: #333645;
+    display: block; }
 .icon__services--view-our-work {
   font-family: "icomoon" !important;
   font-size: 2.25rem;
@@ -1393,7 +1426,7 @@ div {
   line-height: 64px; }
   .icon__services--view-our-work:before {
     content: "";
-    color: black;
+    color: #333645;
     display: block; }
 .icon__services--bespoke-software {
   font-family: "icomoon" !important;
@@ -1457,5 +1490,19 @@ div {
   width: 65px;
   margin: 0 auto 17px;
   border-radius: 50%; }
+
+.partners-section {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  overflow: hidden; }
+  .partners-section .flex {
+    justify-content: space-between; }
+
+.partners-slide-item {
+  padding: 0 20px; }
+  .partners-slide-item img {
+    filter: grayscale(1); }
+    .partners-slide-item img:hover {
+      filter: grayscale(0); }
 
 /*# sourceMappingURL=main.css.map */

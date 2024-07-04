@@ -34,6 +34,35 @@
   }
 }
 
+#xsmall-view-our-work {
+  color: #333645;
+  justify-content: center;
+  margin-top: 12px;
+
+  .icon__services--xsmall-view-our-work {
+    font-size: 1.625rem;
+    justify-content: center;
+  }
+  span {
+    display: inline-flex;
+    color: #333645;
+    a {
+      font-size: 1.625rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: baseline;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @include mq("small") {
+    display: none;
+  }
+}
+
 .flex {
   @include e(services) {
     padding-left: 15px;
@@ -109,11 +138,15 @@
 #services-container {
   // container section
   padding-top: 22px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+
+  @include mq("small") {
+    padding-bottom: 100px;
+  }
 }
 
 #services-section {
@@ -199,7 +232,17 @@
 @include services-panel-colors($element: developer-training, $avatar-and-hover-colors: color(developer-training-avatar-hoverIcon-hoverButtonText));
 
 .icon {
-  @include icon-style($element: services, $modifier: view-our-work, $icon: arrow-right, $font-size: 2.25rem, $font-weight: normal !important, $line-height: 64px, $display: block, $color: black);
+  @include icon-style(
+    $element: services,
+    $modifier: xsmall-view-our-work,
+    $icon: arrow-right,
+    $font-size: 1.625rem,
+    $font-weight: 400 !important,
+    $line-height: 64px,
+    $display: block,
+    $color: #333645
+  );
+  @include icon-style($element: services, $modifier: view-our-work, $icon: arrow-right, $font-size: 2.25rem, $font-weight: normal !important, $line-height: 64px, $display: block, $color: #333645);
   @include icon-style($element: services, $modifier: bespoke-software, $icon: laptop2, $font-size: 2rem, $line-height: 64px, $display: block, $color: white);
   @include icon-style($element: services, $modifier: it-support, $icon: monitor, $font-size: 2rem, $line-height: 64px, $display: block, $color: white);
   @include icon-style($element: services, $modifier: digital-marketing, $icon: signal, $font-size: 2rem, $line-height: 64px, $display: block, $color: white);
