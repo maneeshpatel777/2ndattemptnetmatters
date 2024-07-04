@@ -12,9 +12,14 @@ body {
   letter-spacing: 0.4px;
 }
 
-// Changes hyperlink colour to the inherited colour of the text
-a:visited {
+a {
+  // Changes url colour to the inherited colour of the text
   color: inherit;
+
+  &:visited {
+    // Changes visited url colour to the inherited colour of the text
+    color: inherit;
+  }
 }
 
 .hidden {

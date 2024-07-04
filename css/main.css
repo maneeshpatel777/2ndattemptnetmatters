@@ -363,8 +363,10 @@ body {
   font-size: 1rem;
   letter-spacing: 0.4px; }
 
-a:visited {
+a {
   color: inherit; }
+  a:visited {
+    color: inherit; }
 
 .hidden {
   display: none; }
@@ -1494,7 +1496,8 @@ div {
 .partners-section {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  overflow: hidden; }
+  overflow: hidden;
+  padding-bottom: 50px; }
   .partners-section .flex {
     justify-content: space-between; }
 
@@ -1504,5 +1507,88 @@ div {
     filter: grayscale(1); }
     .partners-slide-item img:hover {
       filter: grayscale(0); }
+
+.icon__brand--button-right-arrow {
+  font-family: "icomoon" !important;
+  margin: 0 0 0 12px;
+  font-size: 20px;
+  font-weight: normal !important;
+  line-height: 35px; }
+  .icon__brand--button-right-arrow:before {
+    content: "";
+    color: white;
+    display: inline-block; }
+.icon__brand--star {
+  font-family: "icomoon" !important;
+  margin: 0;
+  font-size: 50px;
+  font-weight: normal !important;
+  line-height: 0; }
+  .icon__brand--star:before {
+    content: "";
+    color: orange;
+    display: inline-block; }
+
+.button__brand {
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 30px;
+  border-radius: 6px;
+  margin-right: 10px;
+  font-size: 20px; }
+  .button__brand--welcome-to-netmatters {
+    background-color: #272936; }
+    .button__brand--welcome-to-netmatters:hover {
+      background-color: #121317; }
+  .button__brand--google-reviews {
+    background-color: #4288f7; }
+    .button__brand--google-reviews:hover {
+      background-color: #146af4; }
+  .button__brand--trustpilot-reviews {
+    background-color: #06b67c; }
+    .button__brand--trustpilot-reviews:hover {
+      background-color: #009b69; }
+
+#what-our-clients-think {
+  margin-top: 22px;
+  margin-bottom: 51px; }
+
+.brand-section {
+  background-color: #333645;
+  padding: 50px 15px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  color: white; }
+  .brand-section h2 {
+    margin-bottom: 40px; }
+    .brand-section h2 strong {
+      font-size: 2.25rem;
+      font-weight: 600; }
+  .brand-section p {
+    line-height: 1.875rem;
+    margin-bottom: 25px; }
+    .brand-section p strong {
+      font-weight: 600; }
+    .brand-section p a {
+      font-weight: inherit; }
+      .brand-section p a:hover {
+        text-decoration: underline; }
+
+.brand-section__content div {
+  display: flex;
+  flex-wrap: wrap; }
+.brand-section__content div:last-child p:first-of-type {
+  font-weight: 600;
+  font-size: 1.3rem;
+  font-style: italic; }
+.brand-section__content div:last-child p:last-of-type {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #a3a8ac; }
+  .brand-section__content div:last-child p:last-of-type a {
+    font-size: inherit;
+    font-weight: inherit;
+    color: white; }
 
 /*# sourceMappingURL=main.css.map */
