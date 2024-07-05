@@ -396,7 +396,7 @@ div {
       width: 970px; } }
   @media (min-width: 1260px) {
     .container {
-      width: 1255px; } }
+      width: 1200px; } }
 
 .nav-item--bespoke:hover::after, .nav-item--it-support:hover::after, .nav-item--digital-marketing:hover::after, .nav-item--telecoms-services:hover::after, .nav-item--web-design:hover::after, .nav-item--cyber-security:hover::after, .nav-item--developer-course:hover::after {
   content: "";
@@ -1502,11 +1502,16 @@ div {
     justify-content: space-between; }
 
 .partners-slide-item {
-  padding: 0 20px; }
+  padding: 0 20px;
+  margin-right: 50px; }
   .partners-slide-item img {
     filter: grayscale(1); }
     .partners-slide-item img:hover {
       filter: grayscale(0); }
+
+@media (min-width: 1260px) {
+  #container-brand-section {
+    width: 1255px; } }
 
 .icon__brand--button-right-arrow {
   font-family: "icomoon" !important;
@@ -1624,5 +1629,40 @@ div {
       font-size: inherit;
       font-weight: inherit;
       color: white; }
+
+.articles-bar {
+  padding-top: 50px; }
+
+.articles-section {
+  padding: 15px 0 50px; }
+
+.articles-bar-heading {
+  display: flex;
+  justify-content: space-between; }
+  .articles-bar-heading h2 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin: 0 0 28px;
+    color: #333645;
+    line-height: 1.1; }
+  @media (min-width: 1px) and (max-width: 767px) {
+    .articles-bar-heading h3 {
+      display: none; } }
+  .articles-bar-heading h3 a {
+    font-size: 1.625rem;
+    font-weight: 600;
+    color: #333645; }
+    .articles-bar-heading h3 a:hover {
+      text-decoration: underline; }
+    .articles-bar-heading h3 a span {
+      font-size: inherit; }
+
+.icon__articles--view-all-right-arrow {
+  font-family: "icomoon" !important;
+  font-weight: 400 !important; }
+  .icon__articles--view-all-right-arrow:before {
+    content: "";
+    color: #333645;
+    display: inherit; }
 
 /*# sourceMappingURL=main.css.map */

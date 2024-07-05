@@ -16,7 +16,7 @@
   </head>
 
   <body>
-    <div class="container">
+    <div id="container">
       <div id="header">
         <header>
           <div id="header-top">
@@ -389,8 +389,8 @@
         <img src="assets/images/4.banner/home-YLei.webp" />
       </div>
       <!-- End of banner div -->
-      <div id="middle-container">
-        <!-- Start of middle-container div -->
+      <div class="container">
+        <!-- Start of container for middle section -->
         <div id="services-container">
           <div id="extra-div">
             <div id="services-section">
@@ -572,7 +572,7 @@
         </div>
         <!-- End of partners-section section -->
         <div id="brand-background">
-          <div class="container">
+          <div class="container" id="container-brand-section">
             <div class="brand-section">
               <div class="flex brand-section__content">
                 <div>
@@ -632,11 +632,39 @@
             </div>
             <!-- End of brand-section section -->
           </div>
-          <!-- End of container for brand section -->
+          <!-- End of container for brand section with id container-brand-section -->
         </div>
         <!-- End of brand-background div -->
+        <div>
+          <div class="articles-bar">
+            <!-- <div class="container"> don't think i need this as container is set on middle -->
+            <div class="articles-bar-heading flex">
+              <h2>Latest News</h2>
+
+              <h3>
+                <a href="https://www.netmatters.co.uk/articles">View All &nbsp<span class="icon__articles--view-all-right-arrow"></span></a>
+              </h3>
+            </div>
+            <!-- </div> -->
+            <!-- End of container for articles bar div -->
+          </div>
+          <!-- End of articles bar div -->
+          <div class="articles-section">
+            <div id="article-list" class="flex">
+              <!-- <div class="row"> -->
+              <div></div>
+
+              <!-- </div>              End of row div, putting for reference, not sure if i need it -->
+            </div>
+            <!-- End of article list id -->
+          </div>
+          <!-- End of articles section div -->
+          <div class="articles-xsmall"></div>
+          <!-- End of articles xsmall div -->
+        </div>
+        <!-- End of articles div -->
       </div>
-      <!-- End of middle container div -->
+      <!-- End of container for middle section -->
     </div>
     <!-- End of id container div -->
   </body>

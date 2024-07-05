@@ -1,3 +1,9 @@
+#container-brand-section {
+  @include mq("large") {
+    width: 1255px; // Set your desired width here
+  }
+}
+
 .icon {
   @include icon-style($element: brand, $modifier: button-right-arrow, $icon: arrow-right, $font-size: 20px, $font-weight: normal !important, $margin: 0 0 0 12px, $line-height: 35px, $color: white);
   @include icon-style($element: brand, $modifier: star, $icon: star, $font-size: 50px, $font-weight: normal !important, $margin: 0, $line-height: 0, $color: orange);

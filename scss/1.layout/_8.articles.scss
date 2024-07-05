@@ -1,0 +1,51 @@
+.articles-bar {
+  padding-top: 50px;
+}
+
+.articles-section {
+  padding: 15px 0 50px;
+}
+
+.articles-bar-heading {
+  display: flex;
+  justify-content: space-between;
+
+  h2 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin: 0 0 28px;
+    color: #333645;
+    line-height: 1.1;
+  }
+
+  h3 {
+    @include mq("xsmall") {
+      display: none;
+    }
+    a {
+      font-size: 1.625rem;
+      font-weight: 600;
+      color: #333645;
+      &:hover {
+        text-decoration: underline;
+      }
+      span {
+        font-size: inherit;
+      }
+    }
+  }
+}
+
+.icon {
+  @include icon-style(
+    $element: articles,
+    $modifier: view-all-right-arrow,
+    $icon: arrow-right,
+    $font-size: null,
+    $font-weight: 400 !important,
+    $margin: null,
+    $line-height: null,
+    $color: #333645,
+    $display: inherit
+  );
+}
