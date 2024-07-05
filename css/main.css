@@ -1140,7 +1140,7 @@ div {
   grid-template-areas: "heading heading heading" "seo ppc cro" "email social-media content"; }
 
 #telecoms-services-grid {
-  grid-template-areas: "heading heading heading" "business-mobile hosted-voip business-voip" "business-broadband leased-lines 3cx"; }
+  grid-template-areas: "heading heading heading" "business-mobile hosted-voip business-voip" "business-broadband leased-lines threecx"; }
 
 #web-design-grid {
   grid-template-areas: "heading heading heading" "bespoke-website ecommerce-website pay-monthly-websites" "branding-design mobile-app web-hosting"; }
