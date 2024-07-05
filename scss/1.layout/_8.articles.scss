@@ -36,6 +36,43 @@
   }
 }
 
+#article-list {
+  display: flex;
+
+  gap: 30px;
+}
+
+.article-item {
+  flex-direction: column;
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+
+  &-image {
+    img {
+      width: 100%;
+    }
+  }
+
+  &-block {
+    padding: 30px;
+  }
+
+  &:nth-child(2) {
+    display: none;
+    @include mq("small") {
+      display: unset;
+    }
+  }
+
+  &:last-child {
+    display: none;
+    @include mq("large") {
+      display: unset;
+    }
+  }
+}
+
 .icon {
   @include icon-style(
     $element: articles,

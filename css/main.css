@@ -1657,6 +1657,30 @@ div {
     .articles-bar-heading h3 a span {
       font-size: inherit; }
 
+#article-list {
+  display: flex;
+  gap: 30px; }
+
+.article-item {
+  flex-direction: column;
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  border-radius: 5px; }
+  .article-item-image img {
+    width: 100%; }
+  .article-item-block {
+    padding: 30px; }
+  .article-item:nth-child(2) {
+    display: none; }
+    @media (min-width: 768px) {
+      .article-item:nth-child(2) {
+        display: unset; } }
+  .article-item:last-child {
+    display: none; }
+    @media (min-width: 1260px) {
+      .article-item:last-child {
+        display: unset; } }
+
 .icon__articles--view-all-right-arrow {
   font-family: "icomoon" !important;
   font-weight: 400 !important; }
