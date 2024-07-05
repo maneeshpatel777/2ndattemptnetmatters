@@ -1,3 +1,8 @@
+#container-articles-section {
+  @include mq("large") {
+    width: 1207px;
+  }
+}
 .articles-bar {
   padding-top: 50px;
 }
@@ -36,14 +41,19 @@
   }
 }
 
-#article-list {
+#articles-list {
   display: flex;
-
+  flex-direction: column;
   gap: 30px;
+
+  @include mq("small") {
+    flex-direction: row;
+  }
 }
 
-.article-item {
+.articles-item {
   flex-direction: column;
+  position: relative; // needed to make anchor clickable on whole panel
   border: 1px solid #ccc;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
@@ -54,21 +64,113 @@
     }
   }
 
-  &-block {
-    padding: 30px;
-  }
-
-  &:nth-child(2) {
-    display: none;
-    @include mq("small") {
-      display: unset;
-    }
-  }
+  // &:nth-child(2) {
+  //   @include mq("small") {
+  //     display: unset;
+  //   }
+  // }
 
   &:last-child {
     display: none;
     @include mq("large") {
       display: unset;
+    }
+  }
+
+  &-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &-block {
+    padding: 30px;
+    h3 {
+      margin-bottom: 15px;
+      a {
+        color: #db8c0d;
+        font-weight: 600;
+      }
+      span {
+        // read time
+        text-transform: uppercase;
+        color: rgba(51, 54, 69, 0.5);
+        font-size: 0.85rem;
+      }
+    }
+    p {
+      margin-bottom: 25px;
+      line-height: 1.375rem;
+      font-size: 0.8125rem;
+      color: hsl(0, 0%, 40%);
+    }
+  }
+
+  &:last-child h3 a {
+    // change the h3 a to blue of the last child of the article item
+    color: #4183d7;
+  }
+}
+
+.articles-item-block-user {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #ccc;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  div:first-child {
+    //avatar
+    border-radius: 50%;
+    overflow: hidden;
+
+    picture {
+      display: flex;
+    }
+  }
+
+  div:last-child {
+    //details
+    font-size: 0.8125rem;
+    color: hsl(0, 0%, 40%);
+    strong {
+      font-size: inherit;
+      font-weight: 600;
+      color: #333645;
+    }
+  }
+}
+
+.button {
+  @include e(articles) {
+    @include m(read-more-1) {
+      color: #fff !important;
+      background-color: #db8c0d;
+      border-color: #db8c0d;
+      border: 1px solid transparent;
+      padding: 5px 15px;
+      display: inline-block;
+      font-weight: 400;
+      font-size: 1.063rem;
+      text-transform: uppercase;
+      line-height: 35px;
+      border-radius: 3px;
+    }
+    @include m(read-more-2) {
+      color: #fff !important;
+      background-color: #4183d7;
+      border-color: #4183d7;
+      border: 1px solid transparent;
+      padding: 5px 15px;
+      display: inline-block;
+      font-weight: 400;
+      font-size: 1.063rem;
+      text-transform: uppercase;
+      line-height: 35px;
+      border-radius: 3px;
     }
   }
 }
