@@ -1,8 +1,10 @@
 #container-articles-section {
   @include mq("large") {
-    width: 1207px;
+    width: 1200px;
+    margin-left: calc(50% - 1200px / 2);
   }
 }
+
 .articles-bar {
   padding-top: 50px;
 }
@@ -53,12 +55,56 @@
 
 .articles-item {
   flex-direction: column;
+
   position: relative; // needed to make anchor clickable on whole panel
-  border: 1px solid #ccc;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  z-index: 1;
+  top: 0;
+  transition: 0.5s ease;
+
+  &:hover {
+    top: -10px;
+  }
+
+  &-tooltip {
+    background-color: #db8c0d;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    color: #fff !important;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0 10px;
+    line-height: 1.438rem;
+    text-transform: uppercase;
+    z-index: 2;
+    &:hover {
+      text-decoration: underline;
+    }
+    &-2 {
+      background-color: #4183d7;
+      position: absolute;
+      right: 0;
+      top: 10px;
+      color: #fff !important;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0 10px;
+      line-height: 1.438rem;
+      text-transform: uppercase;
+      z-index: 2;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 
   &-image {
+    z-index: 1; //to cover the block border
+    @include mq("small") {
+      display: flex; // fix image bug on 3rd item
+      flex-grow: 1; // fix image bug on 3rd item
+    }
     img {
       width: 100%;
     }
@@ -71,21 +117,31 @@
   // }
 
   &:last-child {
-    display: none;
+    @include mq("small") {
+      display: none;
+    }
     @include mq("large") {
       display: unset;
     }
   }
 
   &-link {
+    // to make the entire panel clickable
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 2;
   }
 
   &-block {
+    margin-top: -11px; // to get the block border to meet the image
+
     padding: 30px;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: #ccc;
+    border-radius: 0 0 3px 3px;
+
     h3 {
       margin-bottom: 15px;
       a {

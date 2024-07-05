@@ -1,6 +1,7 @@
 #container-brand-section {
   @include mq("large") {
     width: 1255px;
+    margin-left: calc(50% - 1255px / 2);
   }
 }
 

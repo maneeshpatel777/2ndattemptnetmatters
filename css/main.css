@@ -1511,7 +1511,8 @@ div {
 
 @media (min-width: 1260px) {
   #container-brand-section {
-    width: 1255px; } }
+    width: 1255px;
+    margin-left: calc(50% - 1255px / 2); } }
 
 .icon__brand--button-right-arrow {
   font-family: "icomoon" !important;
@@ -1632,7 +1633,8 @@ div {
 
 @media (min-width: 1260px) {
   #container-articles-section {
-    width: 1207px; } }
+    width: 1200px;
+    margin-left: calc(50% - 1200px / 2); } }
 
 .articles-bar {
   padding-top: 50px; }
@@ -1672,23 +1674,66 @@ div {
 .articles-item {
   flex-direction: column;
   position: relative;
-  border: 1px solid #ccc;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
-  border-radius: 5px; }
-  .articles-item-image img {
-    width: 100%; }
-  .articles-item:last-child {
-    display: none; }
-    @media (min-width: 1260px) {
-      .articles-item:last-child {
-        display: unset; } }
+  z-index: 1;
+  top: 0;
+  transition: 0.5s ease; }
+  .articles-item:hover {
+    top: -10px; }
+  .articles-item-tooltip {
+    background-color: #db8c0d;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    color: #fff !important;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0 10px;
+    line-height: 1.438rem;
+    text-transform: uppercase;
+    z-index: 2; }
+    .articles-item-tooltip:hover {
+      text-decoration: underline; }
+    .articles-item-tooltip-2 {
+      background-color: #4183d7;
+      position: absolute;
+      right: 0;
+      top: 10px;
+      color: #fff !important;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0 10px;
+      line-height: 1.438rem;
+      text-transform: uppercase;
+      z-index: 2; }
+      .articles-item-tooltip-2:hover {
+        text-decoration: underline; }
+  .articles-item-image {
+    z-index: 1; }
+    @media (min-width: 768px) {
+      .articles-item-image {
+        display: flex;
+        flex-grow: 1; } }
+    .articles-item-image img {
+      width: 100%; }
+  @media (min-width: 768px) {
+    .articles-item:last-child {
+      display: none; } }
+  @media (min-width: 1260px) {
+    .articles-item:last-child {
+      display: unset; } }
   .articles-item-link {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 1; }
+    z-index: 2; }
   .articles-item-block {
-    padding: 30px; }
+    margin-top: -11px;
+    padding: 30px;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: #ccc;
+    border-radius: 0 0 3px 3px; }
     .articles-item-block h3 {
       margin-bottom: 15px; }
       .articles-item-block h3 a {
