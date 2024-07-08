@@ -322,19 +322,19 @@ template {
 
 @font-face {
   font-family: "icomoon";
-  src: url("../fonts/icomoon.ttf") format("truetype");
+  src: url("assets/fonts/icomoon.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: block; }
 @font-face {
   font-family: "Poppins";
-  src: url("../assets/fonts/poppins-v15-latin-600.woff2") format("woff2");
+  src: url("assets/fonts/poppins-v15-latin-600.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: block; }
 @font-face {
   font-family: "Poppins";
-  src: url("../assets/fonts/poppins-v15-latin-regular.woff2") format("woff2");
+  src: url("assets/fonts/poppins-v15-latin-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: block; }
