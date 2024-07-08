@@ -1,0 +1,26 @@
+.clients-section {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  overflow: hidden;
+  padding: 50px 0;
+}
+
+.clients-details {
+  display: none;
+}
+
+.clients-item {
+  padding: 0 20px;
+  margin-right: 50px;
+
+  img {
+    filter: grayscale(1);
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+}
+
+// .clients-details {
+//   display: unset;
+// }
