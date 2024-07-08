@@ -1,19 +1,40 @@
+// Can't figure out how to get box centered, also don't have time, need to finish site now, it's good enough as it is for now.
+
 .clients-section {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  overflow: hidden;
+  overflow: hidden; // this is hiding box, need to turn off once we get to the javascript section
   padding: 50px 0;
+  position: relative;
 }
 
 .clients-details {
   display: none;
+  position: absolute;
+  //left: calc(100% - 50vw);
+  bottom: 100%;
+  z-index: 1000;
+}
+
+.clients-box {
+  background-color: #333645;
+  color: #fff;
+  padding: 20px;
+
+  max-width: 280px;
 }
 
 .clients-item {
   padding: 0 20px;
   margin-right: 50px;
 
-  img {
+  &:hover {
+    .clients-details {
+      display: unset;
+    }
+  }
+
+  picture {
     filter: grayscale(1);
     &:hover {
       filter: grayscale(0);
