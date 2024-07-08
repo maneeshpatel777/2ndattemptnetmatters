@@ -1,0 +1,170 @@
+.footer-bottom {
+  padding-top: 10px;
+  background-color: #212330;
+}
+
+.footer-bottom-container {
+  //
+}
+
+.footer-bottom-copyright {
+  padding: 5px 0 10px;
+  color: white;
+  font-size: 0.8125rem;
+  a {
+    font-size: inherit;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  span {
+    font-size: inherit;
+  }
+
+  @include mq("xsmall") {
+    flex-direction: column;
+    span:nth-child(3) {
+      display: none;
+    }
+  }
+}
+
+.icon {
+  @include icon-style(
+    $element: footer,
+    $modifier: facebook,
+    $icon: facebook,
+    $font-size: 26px,
+    $line-height: 26px,
+    $padding: 12px 22px 16px,
+    $background-color: #212330,
+    $margin: 0 7px 0 0,
+    $hover-background-color: #3c5998
+  );
+  @include icon-style(
+    $element: footer,
+    $modifier: instagram,
+    $icon: instagram,
+    $font-size: 26px,
+    $line-height: 26px,
+    $padding: 12px 22px 16px,
+    $background-color: #212330,
+    $margin: 0 7px 0 0,
+    $hover-background-color: #0177b5
+  );
+  @include icon-style(
+    $element: footer,
+    $modifier: twitter,
+    $icon: twitter,
+    $font-size: 26px,
+    $line-height: 26px,
+    $padding: 12px 22px 16px,
+    $background-color: #212330,
+    $margin: 0 7px 0 0,
+    $hover-background-color: #00aced
+  );
+  @include icon-style(
+    $element: footer,
+    $modifier: linkedin,
+    $icon: linkedin,
+    $font-size: 26px,
+    $line-height: 26px,
+    $padding: 12px 22px 16px,
+    $background-color: #212330,
+    $margin: 0 7px 0 0,
+    $hover-background-color: #d93175
+  );
+}
+
+footer {
+  background-color: #323544;
+  color: #fff;
+  padding: 27px 0 0;
+  position: relative;
+
+  @include mq("large") {
+    padding: 47px 0 0;
+  }
+}
+
+.footer-flex {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mq("large") {
+    flex-wrap: nowrap;
+  }
+}
+
+.footer-company-info {
+  flex: 0 0 100%;
+  justify-content: space-between;
+  gap: 20px;
+
+  @include mq("large") {
+    margin-right: 55px;
+    img {
+      width: 100%;
+    }
+  }
+
+  h4 {
+    margin: 24px 0 36px 0;
+    text-transform: uppercase;
+  }
+
+  @include mq("large") {
+    flex: 0 0 30%;
+  }
+}
+
+.footer-menu-flex {
+  display: flex;
+  flex-wrap: wrap;
+  //width: 100%;
+  margin-bottom: 30px;
+
+  margin: 55px 0 40px 0;
+
+  @include mq("large") {
+    width: 75%;
+    margin-top: 0;
+  }
+}
+
+.footer-menu-item {
+  flex: 0 0 100%;
+  padding: 0 15px 0 0;
+  margin-bottom: 20px;
+
+  h4 {
+    text-transform: uppercase;
+    margin-bottom: 26px;
+  }
+
+  a {
+    font-size: 0.8125rem;
+    line-height: 1.375rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @include mq("xsmall") {
+  }
+
+  @include mq("small") {
+    flex: 0 0 50%;
+    width: 50vw;
+  }
+
+  @include mq("medium") {
+    flex: 0 0 25%;
+    width: 25vw;
+  }
+
+  @include mq("large") {
+    flex: 0 0 25%;
+  }
+}

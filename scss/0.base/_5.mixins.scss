@@ -108,7 +108,9 @@
   $line-height: null,
   $translate-x: null,
   $translate-y: null,
-  $display: inline-block
+  $display: inline-block,
+  $background-color: null,
+  $hover-background-color: null
 ) {
   @include e(#{$element}) {
     @include m(#{$modifier}) {
@@ -118,6 +120,7 @@
       font-size: $font-size;
       font-weight: $font-weight;
       line-height: $line-height;
+      background-color: $background-color;
 
       &:before {
         content: icon($icon);
@@ -133,6 +136,12 @@
           @if $translate-y {
             transform: translateY(#{$translate-y});
           }
+        }
+      }
+
+      @if $hover-background-color {
+        &:hover {
+          background-color: $hover-background-color;
         }
       }
     }
