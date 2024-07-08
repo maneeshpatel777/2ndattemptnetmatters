@@ -1,6 +1,113 @@
-#banner {
+.banner-item {
+  position: relative;
+}
+
+.banner-item-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
   img {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    // margin-left: calc(50% - 50vw);
+  }
+}
+
+.banner-item-content {
+  position: relative;
+  //top: 15%;
+  padding: 3.75rem 0;
+  //width: 100%;
+  color: white;
+  font-weight: 600;
+
+  h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: inherit;
+    margin: 0 0 1.25rem;
+    text-align: center;
+
+    @include mq("medium") {
+      font-size: 4rem;
+      line-height: 5rem;
+      font-weight: inherit;
+      margin: 0 0 20px 0;
+      text-align: unset;
+    }
+  }
+
+  p {
+    margin-bottom: 0.375rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: inherit;
+    text-align: center;
+
+    @include mq("medium") {
+      font-size: 1.625rem;
+      line-height: 2.5rem;
+      font-weight: inherit;
+      width: 70%;
+      text-align: unset;
+      justify-content: flex-start;
+    }
+  }
+
+  @include mq("xsmall") {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include mq("small") {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include mq("medium") {
+    display: block;
+  }
+}
+
+.icon {
+  @include icon-style($element: banner, $modifier: right-arrow, $icon: arrow-right, $display: inline-block, $font-size: inherit);
+}
+
+.button {
+  @include e(banner) {
+    @include m(button-1) {
+      margin-top: 1.938rem;
+      margin-bottom: 1.125rem;
+      line-height: 52px;
+      padding: 5px 20px;
+      font-size: 1.25rem;
+      color: white !important;
+      background-color: #926fb1;
+      border-color: #926fb1;
+      text-transform: uppercase;
+      border-radius: 3px;
+      margin: 31px 0 18px 0;
+      display: inline-block;
+    }
+    @include m(button-2) {
+    }
+    @include m(button-3) {
+    }
+    @include m(button-4) {
+    }
+    @include m(button-5) {
+    }
+    @include m(button-6) {
+    }
+    @include m(button-7) {
+    }
   }
 }
