@@ -96,6 +96,10 @@
       border-radius: 3px;
       margin: 31px 0 18px 0;
       display: inline-block;
+
+      &:hover {
+        background-color: #7d57a0;
+      }
     }
     @include m(button-2) {
     }

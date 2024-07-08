@@ -1233,6 +1233,8 @@ div {
   border-radius: 3px;
   margin: 31px 0 18px 0;
   display: inline-block; }
+  .button__banner--button-1:hover {
+    background-color: #7d57a0; }
 
 #services-heading {
   justify-content: space-between;
