@@ -2,4 +2,7 @@
 assets/images/.DS_Store
 assets/fonts/.DS_Store
 .vscode/settings.json
+.sass-cache/
+
+scss/.DS_Store
 .DS_Store
