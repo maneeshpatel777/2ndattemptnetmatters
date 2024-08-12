@@ -52,7 +52,7 @@
       font-size: 1.625rem;
       line-height: 2.5rem;
       font-weight: inherit;
-      width: 70%;
+      //  width: 70%;
       text-align: unset;
       justify-content: flex-start;
     }
@@ -84,34 +84,67 @@
 .button {
   @include e(banner) {
     @include m(button-1) {
-      margin-top: 1.938rem;
-      margin-bottom: 1.125rem;
-      line-height: 52px;
-      padding: 5px 20px;
-      font-size: 1.25rem;
-      color: white !important;
+      @extend %banner-button;
       background-color: #926fb1;
       border-color: #926fb1;
-      text-transform: uppercase;
-      border-radius: 3px;
-      margin: 31px 0 18px 0;
-      display: inline-block;
 
       &:hover {
         background-color: #7d57a0;
       }
     }
     @include m(button-2) {
+      @extend %banner-button;
+      background-color: #f7b322;
+      border-color: #f7b322;
+
+      &:hover {
+        background-color: #e8a00a;
+      }
     }
     @include m(button-3) {
+      @extend %banner-button;
+      background-color: #4183d7;
+      border-color: #4183d7;
+
+      &:hover {
+        background-color: #296ec6;
+      }
     }
     @include m(button-4) {
+      @extend %banner-button;
+      background-color: #2ecc71;
+      border-color: #2ecc71;
+
+      &:hover {
+        background-color: #26ab5f;
+      }
     }
     @include m(button-5) {
+      @extend %banner-button;
+      background-color: #d64541;
+      border-color: #d64541;
+
+      &:hover {
+        background-color: #c42e2a;
+      }
     }
     @include m(button-6) {
+      @extend %banner-button;
+      background-color: #926fb1;
+      border-color: #926fb1;
+
+      &:hover {
+        background-color: #7d57a0;
+      }
     }
     @include m(button-7) {
+      @extend %banner-button;
+      background-color: #f62459;
+      border-color: #f62459;
+
+      &:hover {
+        background-color: #e80943;
+      }
     }
   }
 }

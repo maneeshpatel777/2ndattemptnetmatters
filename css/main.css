@@ -411,6 +411,18 @@ div {
   border-width: 35px 67px 0;
   clip-path: polygon(50% 100%, 0 0, 100% 0); }
 
+.button__banner--button-1, .button__banner--button-2, .button__banner--button-3, .button__banner--button-4, .button__banner--button-5, .button__banner--button-6, .button__banner--button-7 {
+  margin-top: 1.938rem;
+  margin-bottom: 1.125rem;
+  line-height: 52px;
+  padding: 5px 20px;
+  font-size: 1.25rem;
+  color: white !important;
+  text-transform: uppercase;
+  border-radius: 3px;
+  margin: 31px 0 18px 0;
+  display: inline-block; }
+
 #header-top {
   display: flex;
   justify-content: center;
@@ -1194,7 +1206,6 @@ div {
         font-size: 1.625rem;
         line-height: 2.5rem;
         font-weight: inherit;
-        width: 70%;
         text-align: unset;
         justify-content: flex-start; } }
   @media (min-width: 1px) and (max-width: 767px) {
@@ -1221,20 +1232,40 @@ div {
     display: inline-block; }
 
 .button__banner--button-1 {
-  margin-top: 1.938rem;
-  margin-bottom: 1.125rem;
-  line-height: 52px;
-  padding: 5px 20px;
-  font-size: 1.25rem;
-  color: white !important;
   background-color: #926fb1;
-  border-color: #926fb1;
-  text-transform: uppercase;
-  border-radius: 3px;
-  margin: 31px 0 18px 0;
-  display: inline-block; }
+  border-color: #926fb1; }
   .button__banner--button-1:hover {
     background-color: #7d57a0; }
+.button__banner--button-2 {
+  background-color: #f7b322;
+  border-color: #f7b322; }
+  .button__banner--button-2:hover {
+    background-color: #e8a00a; }
+.button__banner--button-3 {
+  background-color: #4183d7;
+  border-color: #4183d7; }
+  .button__banner--button-3:hover {
+    background-color: #296ec6; }
+.button__banner--button-4 {
+  background-color: #2ecc71;
+  border-color: #2ecc71; }
+  .button__banner--button-4:hover {
+    background-color: #26ab5f; }
+.button__banner--button-5 {
+  background-color: #d64541;
+  border-color: #d64541; }
+  .button__banner--button-5:hover {
+    background-color: #c42e2a; }
+.button__banner--button-6 {
+  background-color: #926fb1;
+  border-color: #926fb1; }
+  .button__banner--button-6:hover {
+    background-color: #7d57a0; }
+.button__banner--button-7 {
+  background-color: #f62459;
+  border-color: #f62459; }
+  .button__banner--button-7:hover {
+    background-color: #e80943; }
 
 #services-heading {
   justify-content: space-between;
@@ -2026,15 +2057,16 @@ footer {
   gap: 20px; }
   @media (min-width: 1260px) {
     .footer-company-info {
-      margin-right: 55px; }
+      margin-right: 55px;
+      flex: 0 0 30%; }
       .footer-company-info img {
         width: 100%; } }
   .footer-company-info h4 {
     margin: 24px 0 36px 0;
     text-transform: uppercase; }
-  @media (min-width: 1260px) {
-    .footer-company-info {
-      flex: 0 0 30%; } }
+  @media (min-width: 1px) and (max-width: 767px) {
+    .footer-company-info img {
+      width: 100%; } }
 
 .footer-menu-flex {
   display: flex;

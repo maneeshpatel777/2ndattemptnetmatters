@@ -103,6 +103,7 @@ footer {
 
   @include mq("large") {
     margin-right: 55px;
+    flex: 0 0 30%;
     img {
       width: 100%;
     }
@@ -113,8 +114,10 @@ footer {
     text-transform: uppercase;
   }
 
-  @include mq("large") {
-    flex: 0 0 30%;
+  @include mq("xsmall") {
+    img {
+      width: 100%;
+    }
   }
 }
 
