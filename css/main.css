@@ -1166,19 +1166,33 @@ div {
 .banner-item {
   position: relative; }
 
+.slick-track {
+  height: 600px; }
+
 .banner-item-image {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0; }
+  .banner-item-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1; }
   .banner-item-image img {
     height: 100%;
     width: 100%;
-    object-fit: cover; }
+    object-fit: cover;
+    object-position: 52% center; }
 
 .banner-item-content {
   position: relative;
+  z-index: 2;
   padding: 3.75rem 0;
   color: white;
   font-weight: 600; }
@@ -1222,7 +1236,8 @@ div {
       align-items: center; } }
   @media (min-width: 992px) {
     .banner-item-content {
-      display: block; } }
+      display: block;
+      padding: 8.75rem 0; } }
 
 .icon__banner--right-arrow {
   font-family: "icomoon" !important;

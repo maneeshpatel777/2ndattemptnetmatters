@@ -2,6 +2,10 @@
   position: relative;
 }
 
+.slick-track {
+  height: 600px;
+}
+
 .banner-item-image {
   position: absolute;
   top: 0;
@@ -9,17 +13,30 @@
   left: 0;
   right: 0;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+  }
+
   img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    // margin-left: calc(50% - 50vw);
+    object-position: 52% center;
   }
 }
 
 .banner-item-content {
   position: relative;
-  //top: 15%;
+  z-index: 2;
+  //margin: 0 auto;
+  //bottom: -55px;
   padding: 3.75rem 0;
   //width: 100%;
   color: white;
@@ -74,6 +91,7 @@
 
   @include mq("medium") {
     display: block;
+    padding: 8.75rem 0;
   }
 }
 
