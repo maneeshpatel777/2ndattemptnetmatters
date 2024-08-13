@@ -2141,7 +2141,14 @@ footer {
   text-transform: uppercase;
   color: #fff;
   width: 350px;
-  background-color: #343645; }
+  background-color: #343645;
+  position: fixed;
+  top: 0;
+  right: -350px;
+  height: 100%;
+  transition: right 0.5s ease-in-out;
+  overflow-y: auto;
+  z-index: 1000; }
   .sidebar > ul > li {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.25); }
@@ -2161,5 +2168,34 @@ footer {
         .sidebar-submenu li a::before {
           content: "\BB";
           margin-right: 15px; }
+  .sidebar.active {
+    right: 0;
+    cursor: pointer; }
+
+#container {
+  position: relative;
+  overflow-x: hidden; }
+
+.no-scroll {
+  overflow: hidden;
+  cursor: pointer; }
+  .no-scroll::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 999; }
+
+#main-content {
+  transition: transform 0.5s ease-in-out;
+  position: relative; }
+  #main-content.shifted {
+    transform: translateX(-350px); }
+
+#header-nav-button {
+  z-index: 1001; }
 
 /*# sourceMappingURL=main.css.map */
