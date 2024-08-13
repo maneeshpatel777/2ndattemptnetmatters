@@ -2136,4 +2136,26 @@ footer {
     .footer-menu-item {
       flex: 0 0 25%; } }
 
+.sidebar {
+  text-transform: uppercase;
+  color: #fff;
+  width: 350px;
+  background-color: #343645; }
+  .sidebar > ul > li > a {
+    font-size: 1rem;
+    padding: 20px;
+    display: block; }
+    .sidebar > ul > li > a:hover {
+      background-color: #3d404e; }
+  .sidebar-submenu {
+    background-color: #272834; }
+    .sidebar-submenu li {
+      padding: 15px 20px; }
+      .sidebar-submenu li a {
+        font-size: 0.875rem;
+        display: block; }
+        .sidebar-submenu li a::before {
+          content: "\BB";
+          margin-right: 15px; }
+
 /*# sourceMappingURL=main.css.map */

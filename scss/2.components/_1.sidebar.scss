@@ -1,0 +1,32 @@
+.sidebar {
+  text-transform: uppercase;
+  color: #fff;
+  width: 350px;
+  background-color: #343645;
+
+  > ul > li > a {
+    font-size: 1rem;
+    padding: 20px;
+    display: block;
+    &:hover {
+      background-color: #3d404e;
+    }
+  }
+
+  &-submenu {
+    background-color: #272834;
+
+    li {
+      padding: 15px 20px;
+
+      a {
+        font-size: 0.875rem;
+        display: block;
+        &::before {
+          content: "\BB";
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}
