@@ -4,9 +4,10 @@
 }
 
 .slick-dots li button:before {
-  color: #cdcfd1;
+  color: #fff;
   font-size: 12px;
   line-height: 25px;
+  opacity: 0.5;
 }
 
 .slick-dots li.slick-active button:before {

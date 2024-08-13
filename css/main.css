@@ -1167,9 +1167,10 @@ div {
   transform: translateY(-80px); }
 
 .slick-dots li button:before {
-  color: #cdcfd1;
+  color: #fff;
   font-size: 12px;
-  line-height: 25px; }
+  line-height: 25px;
+  opacity: 0.5; }
 
 .slick-dots li.slick-active button:before {
   color: #ffffff;
@@ -2141,12 +2142,15 @@ footer {
   color: #fff;
   width: 350px;
   background-color: #343645; }
-  .sidebar > ul > li > a {
-    font-size: 1rem;
-    padding: 20px;
-    display: block; }
-    .sidebar > ul > li > a:hover {
-      background-color: #3d404e; }
+  .sidebar > ul > li {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25); }
+    .sidebar > ul > li > a {
+      font-size: 1rem;
+      padding: 20px;
+      display: block; }
+      .sidebar > ul > li > a:hover {
+        background-color: #3d404e; }
   .sidebar-submenu {
     background-color: #272834; }
     .sidebar-submenu li {
