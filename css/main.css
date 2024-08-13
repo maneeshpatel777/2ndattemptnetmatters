@@ -1163,6 +1163,25 @@ div {
 #developer-course-grid {
   grid-template-areas: "heading heading heading" "train-for-career skills-bootcamp scion-faq" "scion-collaborators scion-collaborators scion-collaborators"; }
 
+.slick-dots li button {
+  transform: translateY(-80px); }
+
+.slick-dots li button:before {
+  color: #cdcfd1;
+  font-size: 12px;
+  line-height: 25px; }
+
+.slick-dots li.slick-active button:before {
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  line-height: 24px;
+  font-size: 14px;
+  opacity: 1; }
+  @media (min-width: 992px) {
+    .slick-dots li.slick-active button:before {
+      line-height: 22px; } }
+
 .banner-item {
   position: relative; }
 
