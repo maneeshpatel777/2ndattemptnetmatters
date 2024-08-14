@@ -2148,15 +2148,18 @@ footer {
 .sidebar {
   text-transform: uppercase;
   color: #fff;
-  width: 350px;
+  width: 275px;
   background-color: #343645;
   position: fixed;
   top: 0;
-  right: -350px;
   height: 100%;
   transition: right 0.5s ease-in-out;
   overflow-y: auto;
-  z-index: 1000; }
+  z-index: 1000;
+  right: -275px; }
+  @media (min-width: 992px) {
+    .sidebar {
+      width: 350px; } }
   .sidebar > ul > li {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.25); }
@@ -2176,9 +2179,49 @@ footer {
         .sidebar-submenu li a::before {
           content: "\BB";
           margin-right: 15px; }
+  @media (min-width: 992px) {
+    .sidebar {
+      right: -350px; } }
   .sidebar.active {
     right: 0;
     cursor: pointer; }
+  .sidebar-small {
+    padding: 0 21px 21px; }
+    .sidebar-small ul li {
+      text-align: center; }
+    .sidebar-small > ul > li {
+      padding: 20px 0 0; }
+      .sidebar-small > ul > li > a {
+        text-align: center;
+        font-size: 1.125rem;
+        padding: 19px 0 18px;
+        border-radius: 3px;
+        outline: 1px solid rgba(0, 0, 0, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        display: block; }
+        .sidebar-small > ul > li > a span {
+          padding-bottom: 10px; }
+        .sidebar-small > ul > li > a > * {
+          display: block;
+          text-align: center; }
+    @media (min-width: 992px) {
+      .sidebar-small {
+        display: none; } }
+    .sidebar-small ul li div {
+      margin-top: 20px; }
+      .sidebar-small ul li div li {
+        border-top: 1px solid rgba(0, 0, 0, 0.45); }
+      .sidebar-small ul li div a {
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        background-color: rgba(0, 0, 0, 0.25);
+        display: block;
+        text-align: center;
+        padding: 10px; }
+  .sidebar > ul li:first-child {
+    display: none; }
+    @media (min-width: 992px) {
+      .sidebar > ul li:first-child {
+        display: revert; } }
 
 #container {
   position: relative;
@@ -2201,7 +2244,10 @@ footer {
   transition: transform 0.5s ease-in-out;
   position: relative; }
   #main-content.shifted {
-    transform: translateX(-350px); }
+    transform: translateX(-250px); }
+    @media (min-width: 992px) {
+      #main-content.shifted {
+        transform: translateX(-350px); } }
 
 #header-nav-button {
   z-index: 1001; }

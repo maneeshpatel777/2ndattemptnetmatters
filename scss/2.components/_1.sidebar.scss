@@ -1,8 +1,12 @@
 .sidebar {
   text-transform: uppercase;
   color: #fff;
-  width: 350px;
+  width: 275px;
   background-color: #343645;
+
+  @include mq(medium) {
+    width: 350px;
+  }
 
   > ul > li {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -36,15 +40,74 @@
 
   position: fixed;
   top: 0;
-  right: -350px;
+
   height: 100%;
   transition: right 0.5s ease-in-out;
   overflow-y: auto;
   z-index: 1000;
 
+  right: -275px;
+
+  @include mq(medium) {
+    right: -350px;
+  }
+
   &.active {
     right: 0;
     cursor: pointer;
+  }
+
+  &-small {
+    padding: 0 21px 21px;
+    ul li {
+      text-align: center;
+    }
+    > ul > li {
+      padding: 20px 0 0;
+      & > a {
+        text-align: center;
+        font-size: 1.125rem;
+        padding: 19px 0 18px;
+        border-radius: 3px;
+        outline: 1px solid rgba(0, 0, 0, 0.25);
+        border: 1px solid hsla(0, 0%, 100%, 0.1);
+        display: block;
+        span {
+          padding-bottom: 10px;
+        }
+
+        & > * {
+          display: block;
+          text-align: center;
+        }
+      }
+    }
+
+    @include mq(medium) {
+      display: none;
+    }
+
+    & ul li div {
+      margin-top: 20px;
+      & li {
+        border-top: 1px solid rgba(0, 0, 0, 0.45);
+      }
+
+      & a {
+        border-top: 1px solid hsla(0, 0%, 100%, 0.05);
+        background-color: rgba(0, 0, 0, 0.25);
+        display: block;
+        text-align: center;
+        padding: 10px;
+      }
+    }
+  }
+
+  > ul li:first-child {
+    display: none;
+    @include mq(medium) {
+      display: revert;
+    }
   }
 }
 
@@ -73,7 +136,11 @@
   position: relative;
 
   &.shifted {
-    transform: translateX(-350px);
+    transform: translateX(-250px);
+
+    @include mq(medium) {
+      transform: translateX(-350px);
+    }
   }
 }
 
