@@ -500,18 +500,26 @@ div {
   width: 33px;
   height: 4px;
   display: block;
-  position: relative; }
+  position: relative;
+  transition: background-color 0.5s ease; }
   .hamburger-icon:before, .hamburger-icon:after {
     content: "";
     background-color: white;
     width: 33px;
     height: 4px;
     position: absolute;
-    left: 0; }
+    left: 0;
+    transition: transform 0.5s ease; }
   .hamburger-icon:before {
     top: -10px; }
   .hamburger-icon:after {
     top: 10px; }
+  .hamburger-icon.active {
+    background-color: transparent; }
+    .hamburger-icon.active:before {
+      transform: translateY(10px) rotate(45deg); }
+    .hamburger-icon.active:after {
+      transform: translateY(-10px) rotate(-45deg); }
 
 .header-top-buttons {
   display: inline-flex;

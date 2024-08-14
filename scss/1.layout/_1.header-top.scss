@@ -120,6 +120,7 @@
   height: 4px;
   display: block;
   position: relative;
+  transition: background-color 0.5s ease;
 
   &:before,
   &:after {
@@ -129,6 +130,7 @@
     height: 4px;
     position: absolute;
     left: 0;
+    transition: transform 0.5s ease;
   }
 
   &:before {
@@ -137,6 +139,18 @@
 
   &:after {
     top: 10px;
+  }
+
+  &.active {
+    background-color: transparent;
+
+    &:before {
+      transform: translateY(10px) rotate(45deg);
+    }
+
+    &:after {
+      transform: translateY(-10px) rotate(-45deg);
+    }
   }
 }
 
