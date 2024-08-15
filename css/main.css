@@ -2252,4 +2252,98 @@ footer {
 #header-nav-button {
   z-index: 1001; }
 
+.cookies-app {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100; }
+  .cookies-app > div:first-of-type {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 30px; }
+    @media (min-width: 768px) {
+      .cookies-app > div:first-of-type {
+        width: 600px;
+        padding: 0; } }
+    .cookies-app > div:first-of-type > div:first-of-type {
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      border-radius: 5px; }
+      .cookies-app > div:first-of-type > div:first-of-type h3 {
+        padding: 15px 20px;
+        border-bottom: 1px solid #e5e5e5;
+        font-size: 1.625rem;
+        line-height: 1.42857143;
+        font-weight: 400;
+        color: #333645; }
+      .cookies-app > div:first-of-type > div:first-of-type p {
+        padding: 20px;
+        margin-bottom: 25px;
+        font-size: 1rem;
+        line-height: 1.875rem;
+        color: #666666; }
+        .cookies-app > div:first-of-type > div:first-of-type p a:hover {
+          text-decoration: underline; }
+      .cookies-app > div:first-of-type > div:first-of-type > :last-child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 19px 20px 20px;
+        border-top: 1px solid #e5e5e5; }
+        @media (min-width: 768px) {
+          .cookies-app > div:first-of-type > div:first-of-type > :last-child {
+            flex-direction: row;
+            align-items: center;
+            gap: 15px; } }
+        .cookies-app > div:first-of-type > div:first-of-type > :last-child button {
+          border: 1px solid #e5e5e5;
+          width: 100%;
+          text-transform: uppercase;
+          line-height: 35px;
+          padding: 5px 15px;
+          font-size: 1.063rem;
+          border-radius: 5px;
+          color: #fff;
+          text-align: center;
+          cursor: pointer; }
+          .cookies-app > div:first-of-type > div:first-of-type > :last-child button:first-child {
+            background-color: #999aa3;
+            margin-bottom: 30px; }
+            @media (min-width: 768px) {
+              .cookies-app > div:first-of-type > div:first-of-type > :last-child button:first-child {
+                margin-bottom: 0; } }
+            .cookies-app > div:first-of-type > div:first-of-type > :last-child button:first-child:hover {
+              background-color: #84858f; }
+          .cookies-app > div:first-of-type > div:first-of-type > :last-child button:last-child {
+            background-color: #9270b1; }
+            .cookies-app > div:first-of-type > div:first-of-type > :last-child button:last-child:hover {
+              background-color: #7e57a0; }
+
+.manage-cookies-button {
+  position: fixed;
+  line-height: 22px;
+  z-index: 99;
+  bottom: 0;
+  background: #75788a;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #fff;
+  border: solid #75788a;
+  border-width: 1px 1px 0 0;
+  border-radius: 0;
+  border-top-right-radius: 10px;
+  padding: 0 10px;
+  font-size: 0.8rem;
+  cursor: pointer; }
+  .manage-cookies-button:hover {
+    background-color: #999aa2;
+    border-color: #999aa2; }
+
 /*# sourceMappingURL=main.css.map */
