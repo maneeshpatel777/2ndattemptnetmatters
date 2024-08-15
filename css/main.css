@@ -2259,7 +2259,7 @@ footer {
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 100; }
+  z-index: 1002; }
   .cookies-app > div:first-of-type {
     position: fixed;
     top: 50%;
@@ -2326,7 +2326,7 @@ footer {
             .cookies-app > div:first-of-type > div:first-of-type > :last-child button:last-child:hover {
               background-color: #7e57a0; }
 
-.manage-cookies-button {
+.manage-consent-button {
   position: fixed;
   line-height: 22px;
   z-index: 99;
@@ -2342,7 +2342,7 @@ footer {
   padding: 0 10px;
   font-size: 0.8rem;
   cursor: pointer; }
-  .manage-cookies-button:hover {
+  .manage-consent-button:hover {
     background-color: #999aa2;
     border-color: #999aa2; }
 
