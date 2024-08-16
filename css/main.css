@@ -2346,4 +2346,16 @@ footer {
     background-color: #999aa2;
     border-color: #999aa2; }
 
+.sticky-header {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  z-index: 2000;
+  background-color: white;
+  transition: top 0.5s ease-in-out; }
+
+.sticky-header.visible {
+  top: 0; }
+
 /*# sourceMappingURL=main.css.map */
