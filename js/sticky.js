@@ -1,3 +1,5 @@
+console.log("hello from sticky.js");
+
 let lastScrollTop = 0;
 const originalHeader = document.getElementById("header");
 const stickyHeader = document.createElement("div");

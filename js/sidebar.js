@@ -1,3 +1,5 @@
+console.log("hello from sidebar.js");
+
 document.addEventListener("DOMContentLoaded", function () {
   const hamburgerButton = document.getElementById("header-nav-button");
   const hamburgerIcon = hamburgerButton.querySelector(".hamburger-icon");

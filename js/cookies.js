@@ -1,3 +1,5 @@
+console.log("hello from cookies.js");
+
 const cookiesApp = document.querySelector(".cookies-app");
 const acceptCookiesButton = document.getElementById("accept-cookies-button");
 const manageConsentButton = document.querySelector(".manage-consent-button");
