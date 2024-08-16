@@ -1,9 +1,8 @@
 console.log("hello from infinite-slide.js");
 
-function initInfiniteCarousel() {
-  const carousel = document.querySelector(".partners-section .flex");
-  const items = carousel.querySelectorAll(".partners-slide-item");
-  const itemWidth = items[0].offsetWidth + parseInt(getComputedStyle(items[0]).marginRight);
+function initInfiniteCarousel(sectionClass, itemClass) {
+  const carousel = document.querySelector(`.${sectionClass} .flex`);
+  const items = carousel.querySelectorAll(`.${itemClass}`);
 
   // Clone the first set of items and append them to the end
   items.forEach((item) => {
@@ -11,27 +10,31 @@ function initInfiniteCarousel() {
     carousel.appendChild(clone);
   });
 
-  let position = 0;
+  function shiftToNextItem() {
+    // Check if any item is being hovered
+    const isHovered = carousel.querySelector(`.${itemClass}:hover`);
+    if (isHovered) return; // Do nothing if an item is hovered
 
-  function shiftLeft() {
-    position -= itemWidth;
+    const firstItem = carousel.querySelector(`.${itemClass}`);
+    const itemWidth = firstItem.offsetWidth + parseInt(getComputedStyle(firstItem).marginRight);
+
     carousel.style.transition = "transform 0.5s ease-in-out";
-    carousel.style.transform = `translateX(${position}px)`;
+    carousel.style.transform = `translateX(-${itemWidth}px)`;
 
-    if (position <= -itemWidth * items.length) {
-      setTimeout(() => {
-        carousel.style.transition = "none";
-        position = 0;
-        carousel.style.transform = `translateX(${position}px)`;
-
-        void carousel.offsetWidth;
-
-        carousel.style.transition = "transform 0.5s ease-in-out";
-      }, 500);
-    }
+    setTimeout(() => {
+      carousel.style.transition = "none";
+      carousel.appendChild(firstItem);
+      carousel.style.transform = "translateX(0)";
+      // Force reflow
+      carousel.offsetHeight;
+      carousel.style.transition = "transform 0.5s ease-in-out";
+    }, 500);
   }
 
-  setInterval(shiftLeft, 1000);
+  setInterval(shiftToNextItem, 3000);
 }
 
-document.addEventListener("DOMContentLoaded", initInfiniteCarousel);
+document.addEventListener("DOMContentLoaded", () => {
+  initInfiniteCarousel("partners-section", "partners-slide-item");
+  initInfiniteCarousel("clients-section", "clients-item");
+});
