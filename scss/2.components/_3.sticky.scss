@@ -5,9 +5,20 @@
   width: 100%;
   z-index: 2000;
   background-color: white;
-  transition: top 0.5s ease-in-out;
-}
+  transition: top 0.5s ease-in-out, transform 0.5s ease-in-out;
 
-.sticky-header.visible {
-  top: 0;
+  &.visible {
+    top: 0;
+  }
+
+  &.shifted {
+    transform: translateX(-250px);
+    z-index: 1;
+  }
+
+  @include mq(medium) {
+    &.shifted {
+      transform: translateX(-350px);
+    }
+  }
 }

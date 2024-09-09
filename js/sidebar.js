@@ -1,27 +1,36 @@
 console.log("hello from sidebar.js");
 
 document.addEventListener("DOMContentLoaded", function () {
-  const hamburgerButton = document.getElementById("header-nav-button");
-  const hamburgerIcon = hamburgerButton.querySelector(".hamburger-icon");
+  const hamburgerButtons = document.querySelectorAll("#header-nav-button, .sticky-header #header-nav-button");
   const sidebar = document.querySelector(".sidebar");
   const mainContent = document.getElementById("main-content");
+  const stickyHeader = document.querySelector(".sticky-header");
 
   function toggleSidebar() {
     sidebar.classList.toggle("active");
     mainContent.classList.toggle("shifted");
     document.body.classList.toggle("no-scroll");
-    hamburgerIcon.classList.toggle("active");
+    if (stickyHeader) {
+      stickyHeader.classList.toggle("shifted");
+      stickyHeader.classList.toggle("no-scroll");
+    }
+    hamburgerButtons.forEach((button) => button.querySelector(".hamburger-icon").classList.toggle("active"));
   }
 
-  hamburgerButton.addEventListener("click", toggleSidebar);
-  hamburgerIcon.addEventListener("click", function (event) {
-    // Prevent the event from bubbling up and toggling the sidebar function again in the button (as the hamburger icon is inside the button), thus stopping it from working
-    event.stopPropagation();
-    toggleSidebar();
+  hamburgerButtons.forEach((button) => {
+    button.addEventListener("click", function (event) {
+      event.stopPropagation();
+      toggleSidebar();
+    });
+    const hamburgerIcon = button.querySelector(".hamburger-icon");
+    hamburgerIcon.addEventListener("click", function (event) {
+      event.stopPropagation();
+      toggleSidebar();
+    });
   });
 
   document.body.addEventListener("click", function (event) {
-    if (this.classList.contains("no-scroll") && !sidebar.contains(event.target) && event.target !== hamburgerButton) {
+    if (this.classList.contains("no-scroll") && !sidebar.contains(event.target) && event.target !== hamburgerButtons[0]) {
       toggleSidebar();
     }
   });
