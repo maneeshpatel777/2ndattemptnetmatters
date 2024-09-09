@@ -3,34 +3,116 @@
 .clients-section {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  overflow: hidden; // this is hiding box, need to turn off once we get to the javascript section
+  //overflow: hidden; // this is hiding box, need to turn off once we get to the javascript section
   padding: 50px 0;
   position: relative;
+  z-index: 2000;
 }
 
 .clients-details {
   display: none;
   position: absolute;
-  //left: calc(100% - 50vw);
-  bottom: 100%;
-  z-index: 1000;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 148%;
 }
 
 .clients-box {
   background-color: #333645;
   color: #fff;
   padding: 20px;
+  // margin-bottom: 30px;
+  width: 280px;
 
-  max-width: 280px;
+  text-align: center;
+
+  h3 {
+    text-align: inherit;
+    padding-bottom: 17px;
+    font-size: 1.125rem;
+  }
+
+  p {
+    text-align: inherit;
+    font-size: 0.8125rem;
+    line-height: 1.375rem;
+  }
+
+  .button {
+    margin-top: 11px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 35px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    border-radius: 3px;
+
+    &.ashcroft {
+      background-color: #926fb1;
+      &:hover {
+        background-color: #7e57a0;
+      }
+    }
+
+    &.onetraveller {
+      background-color: #926fb1;
+      &:hover {
+        background-color: #7e57a0;
+      }
+    }
+
+    &.searlesleisureresort {
+      background-color: #2ecc71;
+      &:hover {
+        background-color: #26ab5f;
+      }
+    }
+
+    &.blackswancaregroup {
+      background-color: #f7b322;
+      &:hover {
+        background-color: #e8a008;
+      }
+    }
+
+    &.girlguidinganglia {
+      background-color: #4183d7;
+      &:hover {
+        background-color: #2a6ec6;
+      }
+    }
+
+    &.sweetzy {
+      background-color: #2ecc71;
+      &:hover {
+        background-color: #26ab5f;
+      }
+    }
+
+    &.gdst {
+      background-color: #2ecc71;
+      &:hover {
+        background-color: #26ab5f;
+      }
+    }
+  }
 }
 
 .clients-item {
+  position: relative;
   padding: 0 20px;
   margin-right: 50px;
 
   &:hover {
     .clients-details {
       display: unset;
+    }
+    &::after {
+      @extend %nav-item-triangle;
+      border-width: 35px 36px 0;
+      color: #333645;
+      bottom: 121%;
     }
   }
 
@@ -42,6 +124,6 @@
   }
 }
 
-// .clients-details {
-//   display: unset;
-// }
+.icon {
+  @include icon-style($element: clients, $modifier: button-right-arrow, $icon: arrow-right, $font-size: 16px, $font-weight: 400 !important, $margin: 0, $line-height: 35px, $color: white);
+}

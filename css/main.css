@@ -398,7 +398,7 @@ div {
     .container {
       width: 1200px; } }
 
-.nav-item--bespoke:hover::after, .nav-item--it-support:hover::after, .nav-item--digital-marketing:hover::after, .nav-item--telecoms-services:hover::after, .nav-item--web-design:hover::after, .nav-item--cyber-security:hover::after, .nav-item--developer-course:hover::after {
+.nav-item--bespoke:hover::after, .nav-item--it-support:hover::after, .nav-item--digital-marketing:hover::after, .nav-item--telecoms-services:hover::after, .nav-item--web-design:hover::after, .nav-item--cyber-security:hover::after, .nav-item--developer-course:hover::after, .clients-item:hover::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -1983,31 +1983,94 @@ div {
 .clients-section {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  overflow: hidden;
   padding: 50px 0;
-  position: relative; }
+  position: relative;
+  z-index: 2000; }
 
 .clients-details {
   display: none;
   position: absolute;
-  bottom: 100%;
-  z-index: 1000; }
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 148%; }
 
 .clients-box {
   background-color: #333645;
   color: #fff;
   padding: 20px;
-  max-width: 280px; }
+  width: 280px;
+  text-align: center; }
+  .clients-box h3 {
+    text-align: inherit;
+    padding-bottom: 17px;
+    font-size: 1.125rem; }
+  .clients-box p {
+    text-align: inherit;
+    font-size: 0.8125rem;
+    line-height: 1.375rem; }
+  .clients-box .button {
+    margin-top: 11px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 35px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    border-radius: 3px; }
+    .clients-box .button.ashcroft {
+      background-color: #926fb1; }
+      .clients-box .button.ashcroft:hover {
+        background-color: #7e57a0; }
+    .clients-box .button.onetraveller {
+      background-color: #926fb1; }
+      .clients-box .button.onetraveller:hover {
+        background-color: #7e57a0; }
+    .clients-box .button.searlesleisureresort {
+      background-color: #2ecc71; }
+      .clients-box .button.searlesleisureresort:hover {
+        background-color: #26ab5f; }
+    .clients-box .button.blackswancaregroup {
+      background-color: #f7b322; }
+      .clients-box .button.blackswancaregroup:hover {
+        background-color: #e8a008; }
+    .clients-box .button.girlguidinganglia {
+      background-color: #4183d7; }
+      .clients-box .button.girlguidinganglia:hover {
+        background-color: #2a6ec6; }
+    .clients-box .button.sweetzy {
+      background-color: #2ecc71; }
+      .clients-box .button.sweetzy:hover {
+        background-color: #26ab5f; }
+    .clients-box .button.gdst {
+      background-color: #2ecc71; }
+      .clients-box .button.gdst:hover {
+        background-color: #26ab5f; }
 
 .clients-item {
+  position: relative;
   padding: 0 20px;
   margin-right: 50px; }
   .clients-item:hover .clients-details {
     display: unset; }
+  .clients-item:hover::after {
+    border-width: 35px 36px 0;
+    color: #333645;
+    bottom: 121%; }
   .clients-item picture {
     filter: grayscale(1); }
     .clients-item picture:hover {
       filter: grayscale(0); }
+
+.icon__clients--button-right-arrow {
+  font-family: "icomoon" !important;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400 !important;
+  line-height: 35px; }
+  .icon__clients--button-right-arrow:before {
+    content: "";
+    color: white;
+    display: inline-block; }
 
 .footer-bottom {
   padding-top: 10px;
