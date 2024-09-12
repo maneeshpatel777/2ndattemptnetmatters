@@ -30,6 +30,16 @@
   height: 600px;
 }
 
+.ipad-banner-quickfix {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  @include mq("medium") {
+    display: block;
+  }
+}
+
 .banner-item-image {
   position: absolute;
   top: 0;
