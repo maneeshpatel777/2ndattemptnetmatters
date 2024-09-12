@@ -473,7 +473,10 @@ div {
   @media (min-width: 768px) {
     .search-bar {
       display: inline-block !important;
-      width: 174px; } }
+      width: 174px; }
+      .search-bar:focus {
+        border-color: #5bc0de;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6); } }
   @media (min-width: 992px) {
     .search-bar {
       display: none !important; } }
