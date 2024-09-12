@@ -2188,6 +2188,16 @@ footer {
     .footer-company-info img {
       width: 100%; } }
 
+@media (min-width: 1px) and (max-width: 480px) {
+  .footer-icons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 0; }
+    .footer-icons a {
+      margin: 0 0px 30px; }
+      .footer-icons a span {
+        padding: 12px 40px 16px; } }
+
 .footer-menu-flex {
   display: flex;
   flex-wrap: wrap;
