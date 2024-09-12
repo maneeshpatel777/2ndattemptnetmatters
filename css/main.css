@@ -1954,7 +1954,7 @@ div {
     .articles-item-block-user div:first-child picture {
       display: flex; }
   .articles-item-block-user div:last-child {
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
     color: #666666; }
     .articles-item-block-user div:last-child strong {
       font-size: inherit;
