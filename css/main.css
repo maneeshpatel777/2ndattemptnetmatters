@@ -829,6 +829,8 @@ div {
   margin: 10px 0 0 -10px;
   padding: 10px;
   font-size: 1.2rem; }
+  .submenu-grid li:not(.submenu-heading):hover {
+    text-decoration: underline; }
 
 .icon__bespoke-software-submenu--crm {
   font-family: "icomoon" !important;

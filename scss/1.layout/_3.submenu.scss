@@ -58,6 +58,10 @@
   margin: 10px 0 0 -10px;
   padding: 10px;
   font-size: 1.2rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .icon {
