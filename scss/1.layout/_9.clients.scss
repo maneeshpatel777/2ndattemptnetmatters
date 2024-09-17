@@ -4,7 +4,7 @@
   width: 100vw;
   margin-left: calc(50% - 50vw);
   //overflow: hidden; // this is hiding box, need to turn off once we get to the javascript section
-  padding: 50px 0;
+  padding: 0 0 50px 0;
   position: relative;
   z-index: 2000;
 }
@@ -14,7 +14,12 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 148%;
+  bottom: 100%;
+  // margin-bottom: 30px;
+}
+
+.clients-hidden-hover-area {
+  padding: 30px;
 }
 
 .clients-box {
@@ -106,13 +111,13 @@
 
   &:hover {
     .clients-details {
-      display: unset;
+      display: block;
     }
-    &::after {
+    & .clients-box .bottom-triangle::after {
       @extend %nav-item-triangle;
       border-width: 35px 36px 0;
       color: #333645;
-      bottom: 121%;
+      //bottom: 121%;
     }
   }
 

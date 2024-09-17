@@ -398,7 +398,7 @@ div {
     .container {
       width: 1200px; } }
 
-.nav-item--bespoke:hover::after, .nav-item--it-support:hover::after, .nav-item--digital-marketing:hover::after, .nav-item--telecoms-services:hover::after, .nav-item--web-design:hover::after, .nav-item--cyber-security:hover::after, .nav-item--developer-course:hover::after, .clients-item:hover::after {
+.nav-item--bespoke:hover::after, .nav-item--it-support:hover::after, .nav-item--digital-marketing:hover::after, .nav-item--telecoms-services:hover::after, .nav-item--web-design:hover::after, .nav-item--cyber-security:hover::after, .nav-item--developer-course:hover::after, .clients-item:hover .clients-box .bottom-triangle::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -1997,7 +1997,7 @@ div {
 .clients-section {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  padding: 50px 0;
+  padding: 0 0 50px 0;
   position: relative;
   z-index: 2000; }
 
@@ -2006,7 +2006,10 @@ div {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 148%; }
+  bottom: 100%; }
+
+.clients-hidden-hover-area {
+  padding: 30px; }
 
 .clients-box {
   background-color: #333645;
@@ -2065,11 +2068,10 @@ div {
   padding: 0 20px;
   margin-right: 50px; }
   .clients-item:hover .clients-details {
-    display: unset; }
-  .clients-item:hover::after {
+    display: block; }
+  .clients-item:hover .clients-box .bottom-triangle::after {
     border-width: 35px 36px 0;
-    color: #333645;
-    bottom: 121%; }
+    color: #333645; }
   .clients-item picture {
     filter: grayscale(1); }
     .clients-item picture:hover {
