@@ -1,4 +1,4 @@
-console.log("hello from sidebar.js");
+//console.log("hello from sidebar.js");
 
 document.addEventListener("DOMContentLoaded", function () {
   const hamburgerButtons = document.querySelectorAll("#header-nav-button, .sticky-header #header-nav-button");

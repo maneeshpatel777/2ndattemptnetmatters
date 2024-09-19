@@ -1,4 +1,4 @@
-console.log("hello from cookies.js");
+//console.log("hello from cookies.js");
 
 const cookiesApp = document.querySelector(".cookies-app");
 const acceptCookiesButton = document.getElementById("accept-cookies-button");

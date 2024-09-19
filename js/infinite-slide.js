@@ -1,4 +1,4 @@
-console.log("hello from infinite-slide.js");
+//console.log("hello from infinite-slide.js");
 
 function initInfiniteCarousel(sectionClass, itemClass) {
   const carousel = document.querySelector(`.${sectionClass} .flex`);

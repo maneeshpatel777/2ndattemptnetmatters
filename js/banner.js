@@ -1,4 +1,4 @@
-console.log("hello from banner.js");
+//console.log("hello from banner.js");
 
 $("#banner").slick({
   slidesToShow: 1,
